@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
       <Navbar />
-      <main className="p-4">{children}</main>
+      <main className="flex-grow">{children}</main>
       <Footer/>
       </body>
     </html>

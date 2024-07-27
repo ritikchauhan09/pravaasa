@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <>
     {/* primary navbar with all the other pages */}
-    <nav className="bg-black p-1">
+    <nav className="bg-black p-2">
       <div className="max-w-full px-10 mx-auto flex justify-between items-center">
         <div className="flex items-center">
         <img src='./images/pravaasa.png' alt='companylogo' width={70}/>
