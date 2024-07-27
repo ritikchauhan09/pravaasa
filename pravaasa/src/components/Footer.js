@@ -13,32 +13,32 @@ export default function Footer() {
             <h2 className="text-xl font-bold mb-2" itemProp="name">
               Tour & Travel
             </h2>
-            <p itemProp="description">
+            <p itemProp="description" className="text-sm">
               Explore the world with us. We offer the best travel packages and experiences.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="text-center">
-            <h2 className="font-bold mb-2 text-lg">Quick Links</h2>
+            <h2 className="font-bold mb-4 text-lg">Quick Links</h2>
             <ul>
               <li>
-                <Link href="/" className="hover:underline" title="Home">
+                <Link href="/" className="hover:underline text-sm" title="Home">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:underline" title="About Us">
+                <Link href="/about" className="hover:underline text-sm" title="About Us">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/destinations" className="hover:underline" title="Destinations">
+                <Link href="/destinations" className="hover:underline text-sm" title="Destinations">
                   Destinations
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:underline" title="Contact">
+                <Link href="/contact" className="hover:underline text-sm" title="Contact">
                   Contact
                 </Link>
               </li>
@@ -47,14 +47,13 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div className="text-center md:text-left">
-            {/* Contact info */}
-            <h2 className="font-bold mb-2">Contact Info</h2>
+            <h2 className="font-bold mb-4 text-lg">Contact Info</h2>
             <address className="not-italic">
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-2 text-sm">
                 <Image src="/images/location.png" alt="address logo" width={20} height={20} className="mr-2"/>
                 <p>123 Travel Lane, Wanderlust City, XY 12345</p>
               </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-2 text-sm">
                 <Image src="/images/call.png" alt="phone logo" width={20} height={20} className="mr-2"/>
                 <p>
                   <Link href="tel:+1234567890" className="hover:underline">
@@ -62,7 +61,7 @@ export default function Footer() {
                   </Link>
                 </p>
               </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-2 text-sm">
                 <Image src="/images/communication.png" alt="email logo" width={20} height={20} className="mr-2"/>
                 <p>
                   <Link href="mailto:info@pravaasabliss.com" className="hover:underline">
@@ -83,7 +82,7 @@ export default function Footer() {
         <hr className="w-11/12 mx-auto border-gray-600" />
 
         <div className="flex flex-col md:flex-row justify-between items-center py-4">
-          <div className="mb-4 md:mb-0 text-center md:text-left">
+          <div className="mb-4 md:mb-0 text-center md:text-left text-sm">
             {/* Copyright */}
             <p>
               &copy; 2024 Pravaasa Bliss. All rights reserved. |{" "}
@@ -108,7 +107,7 @@ export default function Footer() {
             {/* Social Media Icons */}
             <Link href="/" className="mx-2">
               <Image
-                src="/images/facebook.png"
+                src="/images/social.png"
                 alt="Facebook icon"
                 height={30}
                 width={30}
@@ -132,7 +131,7 @@ export default function Footer() {
             </Link>
             <Link href="/" className="mx-2">
               <Image
-                src="/images/play.png"
+                src="/images/youtube.png"
                 alt="YouTube icon"
                 height={30}
                 width={30}
