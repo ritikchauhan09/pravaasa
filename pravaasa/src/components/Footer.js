@@ -5,7 +5,7 @@ import Newsletter from "./Newsletter";
 export default function Footer() {
   return (
     <footer className="bg-black pt-20 text-white">
-      <div className="container mx-auto px-4">
+      <div className=" max-w-full container mx-auto px-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div className="flex flex-col items-center md:items-start">
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
 
         {/* hr to break */}
-        <hr className="w-11/12 mx-auto border-gray-600" />
+        <hr className="w-11/12 mx-auto border-gray-400" />
 
         <div className="flex flex-col md:flex-row justify-between items-center py-4">
           <div className="mb-4 md:mb-0 text-center md:text-left text-sm">
