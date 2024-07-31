@@ -1,0 +1,41 @@
+.perspective {
+  perspective: 1000px; /* Adds depth to the flip effect */
+}
+
+.cardContainer {
+  position: relative;
+  width: 28rem; /* Adjust the width */
+  height: 16rem; /* Adjust the height */
+  transform-style: preserve-3d; /* Ensures the 3D effect is applied */
+  transition: transform 0.6s; /* Adds smooth transition */
+}
+
+.cardContainer:hover {
+  transform: rotateY(180deg); /* Flips the card on hover */
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back side when facing away */
+}
+
+.front, .back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.5rem; /* Rounded corners */
+}
+
+.front {
+  background-color: #000000; /* Front side color */
+  color: #ffffff; /* Text color for the front side */
+}
+
+.back {
+  background-color: #f59e0b; /* Back side color */
+  color: #ffffff; /* Text color for the back side */
+  transform: rotateY(180deg); /* State when flipped */
+}
