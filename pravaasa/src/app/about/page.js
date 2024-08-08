@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 const AboutUs = () => {
   return (
     <>
@@ -260,6 +259,13 @@ const AboutUs = () => {
 </div>
 
         </section>
+
+
+        {/* slideshow for review system */}
+        
+
+
+
       </main>
     </>
   );

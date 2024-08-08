@@ -4,6 +4,7 @@ import Image from 'next/image';
 import '../app/globals.css'
 import { useState, useEffect } from 'react';
 import SplashScreen from '../components/splashScreen';
+import Destinations from './destinations/page';
 // import RootLayout from './layout';
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true);
@@ -62,7 +63,7 @@ export default function Home() {
         <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="w-16 h-16 bg-blue-500 rounded-full mb-4 flex items-center justify-center">
-              <Image src="/images/hot-air-balloon.gif" alt="Adventure" width={60} height={60} />
+              <Image src="/images/hot-air-balloon.gif" alt="Adventure" width={60} height={60} unoptimized/>
             </div>
             <h3 className="text-xl font-semibold mb-2">Adventure Tours</h3>
             <p className="text-gray-600">Explore breathtaking landscapes and experience thrilling adventures with our expertly crafted tours.</p>
@@ -70,7 +71,7 @@ export default function Home() {
 
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="w-16 h-16 bg-green-500 rounded-full mb-4 flex items-center justify-center">
-              <Image src="/images/clipboard.gif" alt="Relaxation" width={60} height={60} />
+              <Image src="/images/clipboard.gif" alt="Relaxation" width={60} height={60} unoptimized/>
             </div>
             <h3 className="text-xl font-semibold mb-2">Relaxation Packages</h3>
             <p className="text-gray-600">Indulge in our luxury relaxation packages designed to rejuvenate and refresh you.</p>
@@ -78,13 +79,54 @@ export default function Home() {
 
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="w-16 h-16 bg-red-500 rounded-full mb-4 flex items-center justify-center">
-              <Image src="/images/namaste.gif" alt="Culture" width={60} height={60} />
+              <Image src="/images/namaste.gif" alt="Culture" width={60} height={60} unoptimized/>
             </div>
             <h3 className="text-xl font-semibold mb-2">Cultural Experiences</h3>
             <p className="text-gray-600">Immerse yourself in rich cultural experiences with our curated cultural tours and activities.</p>
           </div>
         </section>
 
+{/* some servies section  */}
+<section className="container mx-auto px-4 md:px-8">
+          <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Service 1 */}
+            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+              <img src="/images/service1.jpg" alt="Customized Itineraries" className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-2">Customized Itineraries</h3>
+                <p className="text-gray-700 mb-4">Tailored travel plans to match your unique preferences and interests. Enjoy a personalized experience that suits your style.</p>
+                <a href="/services/customized-itineraries" className="text-blue-600 hover:underline">Explore More</a>
+              </div>
+            </div>
+
+            {/* Service 2 */}
+            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+              <img src="/images/service2.jpg" alt="24/7 Travel Support" className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-2">24/7 Travel Support</h3>
+                <p className="text-gray-700 mb-4">Receive round-the-clock assistance throughout your journey. We're here to ensure your travel experience is smooth and stress-free.</p>
+                <a href="/services/travel-support" className="text-blue-600 hover:underline">Explore More</a>
+              </div>
+            </div>
+
+            {/* Service 3 */}
+            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+              <img src="/images/service3.jpg" alt="Exclusive Travel Packages" className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-2">Exclusive Travel Packages</h3>
+                <p className="text-gray-700 mb-4">Access curated travel packages that offer unique experiences and exclusive benefits. Discover the best deals and destinations.</p>
+                <a href="/services/travel-packages" className="text-blue-600 hover:underline">Explore More</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+{/* top destinations */}
+
+
+
+{/* get started with us */}
         <section className="text-center mb-12">
           <h2 className="text-3xl font-semibold mb-4">Get Started with Us</h2>
           <p className="text-lg text-gray-700 mb-4">
