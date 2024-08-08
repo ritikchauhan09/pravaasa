@@ -86,8 +86,8 @@ const AboutUs = () => {
               className="w-full h-auto object-cover rounded-lg shadow-lg"
             />
           </div>
-          <div className="w-full md:w-1/2 md:pl-8">
-            <p className="text-lg text-gray-700">
+          <div className="w-full md:w-1/2 md:pl-8 text-lg text-gray-700">
+            
               <span className="font-bold text-3xl">Why Choose Us?</span>
               <ul className="mt-4">
                 <li className="mb-2">
@@ -130,7 +130,7 @@ const AboutUs = () => {
               commitment to providing our clients with unforgettable experiences
               that inspire and delight. Join us in creating memories that last a
               lifetime, and let us turn your travel dreams into reality.
-            </p>
+          
           </div>
         </section>
 
@@ -149,8 +149,8 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="flex flex-col md:flex-row ">
-            <div className="w-full md:w-1/2 md:pr-8 mb-4 md:mb-0">
-              <p className="text-lg text-gray-700">
+            <div className="w-full md:w-1/2 md:pr-8 mb-4 md:mb-0 text-lg text-gray-700">
+             
                 <span className="font-bold text-3xl">
                   Key Aspects of Our Vision:
                 </span>
@@ -195,7 +195,7 @@ const AboutUs = () => {
                 Join us in exploring new horizons and creating lasting memories
                 with travel experiences that reflect our commitment to
                 excellence.
-              </p>
+            
             </div>
             <div className="w-full md:w-1/2">
               {/* Image or Content for Our Vision */}
