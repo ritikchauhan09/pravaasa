@@ -9,7 +9,7 @@ export default function Terms() {
         <title>Terms and Conditions</title>
         <meta name="description" content="Terms and Conditions for [Your Travel Website Name]" />
       </Head>
-      <header className='bg-blue-200 text-white text-center py-12'>
+      <header className='bg-blue-200 text-white text-center py-24' style={{backgroundImage:'url("/images/term-service.jpg")'}}>
       <h1 className="text-3xl font-bold mb-6 text-center text-white">Terms and Conditions</h1>
       </header>
       <main className='bg-gray-100 min-h-screen py-8 px-4 md:px-8 '>

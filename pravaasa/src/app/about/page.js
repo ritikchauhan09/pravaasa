@@ -136,7 +136,7 @@ const AboutUs = () => {
         <hr className="w-11/12 mx-auto border-gray-400 my-24" />
 
         {/* Our Vision */}
-        <section className=" items-center mb-8">
+        <section className=" items-center">
           <div className="mb-4">
             <h3 className="text-xl md:text-2xl font-bold mb-2">Our Vision</h3>
             <p className="text-lg text-gray-700">
@@ -201,7 +201,7 @@ const AboutUs = () => {
               <img
                 src="/images/vision.jpg"
                 alt="Our Vision"
-                className="w-full h-auto object-cover rounded-lg shadow-lg"
+                className="w-full h-3/4 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
