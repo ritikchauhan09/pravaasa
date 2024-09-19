@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import Image from "next/image";
 const AboutUs = () => {
   return (
     <>
@@ -62,11 +62,13 @@ const AboutUs = () => {
 
         <section className="flex flex-col md:flex-row items-center mb-8">
           <div className="w-full md:w-1/2 mb-4 md:mb-0">
-            <img
-              src="/images/mission.jpg"
-              alt="Our Mission"
-              className="w-full h-auto object-cover rounded-lg shadow-lg"
-            />
+          <Image
+  src="/images/mission.jpg"
+  alt="Our Mission"
+  width={1200}  // Replace with actual width
+  height={800}  // Replace with actual height
+  className="w-full h-auto object-cover rounded-lg shadow-lg"
+/>
           </div>
           <div className="w-full md:w-1/2 md:pl-8 text-lg text-gray-700">
             <span className="font-bold text-3xl">Why Choose Us?</span>
@@ -117,12 +119,16 @@ const AboutUs = () => {
               </ul>
               At Pravaasa Bliss, we envision a world where every journey is memorable, enriching, and perfectly tailored to your desires. Join us in exploring new horizons and creating lasting memories with travel experiences that reflect our commitment to excellence.
             </div>
-            <div className="w-full md:w-3/4 lg:w-1/2 xl:w-1/3">
-  <img
-    src="/images/vision.jpg"
-    alt="Our Vision"
-    className="w-full h-auto max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg object-cover rounded-lg shadow-lg"
-  />
+            <div className="w-full md:w-3/4 lg:w-1/2 mt-10">
+            <Image
+  src="/images/vision.jpg"
+  alt="Our Vision"
+  width={1200}  // Replace with the actual width of the image
+  height={800} // Replace with the actual height of the image
+  layout="responsive"
+  className="rounded-lg shadow-lg"
+/>
+
 </div>
 
           </div>

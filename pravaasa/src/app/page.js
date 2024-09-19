@@ -51,7 +51,7 @@ export default function Home() {
         <meta property="og:url" content="https://www.pravaasabliss.com" />
       </Head>
 
-<Modal/>
+      <Modal />
       {/* header */}
       <header
         className="relative w-full h-[73vh] bg-cover bg-center"
@@ -79,108 +79,163 @@ export default function Home() {
       {/* main content */}
       <main className="container mx-auto px-4 py-8">
         {/* top destinations */}
-<section className="bg-emerald-900 text-white text-center py-12 rounded-lg">
-  <h1 className="text-4xl font-bold">Top Destinations in India</h1>
-  <p className="text-lg mt-2">
-    Discover the most amazing travel destinations across India with Pravaasa Bliss.
-  </p>
-  <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
-    <div className="bg-white text-black p-4 rounded-lg shadow-lg overflow-hidden">
-      <img src="/images/jaipur.jpg" alt="Jaipur" className="w-full h-48 object-cover rounded-md"/>
-      <h2 className="text-2xl font-semibold mt-4">Jaipur</h2>
-      <p className="mt-2">Explore the vibrant culture and historic palaces of the Pink City.</p>
-    </div>
-    <div className="bg-white text-black p-4 rounded-lg shadow-lg overflow-hidden">
-      <img src="/images/goa.jpg" alt="Goa" className="w-full h-48 object-cover rounded-md"/>
-      <h2 className="text-2xl font-semibold mt-4">Goa</h2>
-      <p className="mt-2">Relax on beautiful beaches and experience lively nightlife.</p>
-    </div>
-    <div className="bg-white text-black p-4 rounded-lg shadow-lg overflow-hidden">
-      <img src="/images/kerala.jpg" alt="Kerala" className="w-full h-48 object-cover rounded-md"/>
-      <h2 className="text-2xl font-semibold mt-4">Kerala</h2>
-      <p className="mt-2">Discover the serene backwaters and lush greenery.</p>
-    </div>
-    <div className="bg-white text-black p-4 rounded-lg shadow-lg overflow-hidden">
-      <img src="/images/uttar-pradesh.jpg" alt="Agra" className="w-full h-48 object-cover rounded-md"/>
-      <h2 className="text-2xl font-semibold mt-4">Agra</h2>
-      <p className="mt-2">Visit the iconic Taj Mahal and explore historical monuments.</p>
-    </div>
-    <div className="bg-white text-black p-4 rounded-lg shadow-lg overflow-hidden">
-      <img src="/images/udaipur.jpg" alt="Udaipur" className="w-full h-48 object-cover rounded-md"/>
-      <h2 className="text-2xl font-semibold mt-4">Udaipur</h2>
-      <p className="mt-2">Enjoy the picturesque lakes and royal palaces.</p>
-    </div>
-    <div className="bg-white text-black p-4 rounded-lg shadow-lg overflow-hidden">
-      <img src="/images/himachal.jpg" alt="Shimla" className="w-full h-48 object-cover rounded-md"/>
-      <h2 className="text-2xl font-semibold mt-4">Shimla</h2>
-      <p className="mt-2">Experience the charming hill station and stunning views.</p>
-    </div>
-  </div>
-</section>
+        <section className="bg-emerald-900 text-white text-center py-12 rounded-lg">
+          <h1 className="text-4xl font-bold">Top Destinations in India</h1>
+          <p className="text-lg mt-2">
+            Discover the most amazing travel destinations across India with
+            Pravaasa Bliss.
+          </p>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+            <div className="bg-white text-black p-4 rounded-lg shadow-lg overflow-hidden">
+              <Image
+                src="/images/jaipur.jpg"
+                alt="Jaipur - The Pink City"
+                width={500} // Replace with the actual width of the image
+                height={300} // Replace with the actual height of the image
+                className="w-full h-48 object-cover rounded-md"
+              />
+
+              <h2 className="text-2xl font-semibold mt-4">Jaipur</h2>
+              <p className="mt-2">
+                Explore the vibrant culture and historic palaces of the Pink
+                City.
+              </p>
+            </div>
+            <div className="bg-white text-black p-4 rounded-lg shadow-lg overflow-hidden">
+              <Image
+                src="/images/goa.jpg"
+                alt="Goa - Beautiful Beaches"
+                width={500} // Replace with the actual width of the image
+                height={300} // Replace with the actual height of the image
+                className="w-full h-48 object-cover rounded-md"
+              />
+              <h2 className="text-2xl font-semibold mt-4">Goa</h2>
+              <p className="mt-2">
+                Relax on beautiful beaches and experience lively nightlife.
+              </p>
+            </div>
+            <div className="bg-white text-black p-4 rounded-lg shadow-lg overflow-hidden">
+              <Image
+                src="/images/kerala.jpg"
+                alt="Kerala - Serene Backwaters"
+                width={500} // Replace with the actual width of the image
+                height={300} // Replace with the actual height of the image
+                className="w-full h-48 object-cover rounded-md"
+              />
+              <h2 className="text-2xl font-semibold mt-4">Kerala</h2>
+              <p className="mt-2">
+                Discover the serene backwaters and lush greenery.
+              </p>
+            </div>
+            <div className="bg-white text-black p-4 rounded-lg shadow-lg overflow-hidden">
+              <Image
+                src="/images/uttar-pradesh.jpg"
+                alt="Agra"
+                width={500}
+                height={300}
+                className="w-full h-48 object-cover rounded-md"
+              />
+              <h2 className="text-2xl font-semibold mt-4">Agra</h2>
+              <p className="mt-2">
+                Visit the iconic Taj Mahal and explore historical monuments.
+              </p>
+            </div>
+            <div className="bg-white text-black p-4 rounded-lg shadow-lg overflow-hidden">
+              <Image
+                src="/images/udaipur.jpg"
+                alt="Udaipur"
+                width={500}
+                height={300}
+                className="w-full h-48 object-cover rounded-md"
+              />
+              <h2 className="text-2xl font-semibold mt-4">Udaipur</h2>
+              <p className="mt-2">
+                Enjoy the picturesque lakes and royal palaces.
+              </p>
+            </div>
+            <div className="bg-white text-black p-4 rounded-lg shadow-lg overflow-hidden">
+              <Image
+                src="/images/himachal.jpg"
+                alt="Shimla"
+                width={500}
+                height={300}
+                className="w-full h-48 object-cover rounded-md"
+              />
+              <h2 className="text-2xl font-semibold mt-4">Shimla</h2>
+              <p className="mt-2">
+                Experience the charming hill station and stunning views.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* why chose us section */}
         <section className="mt-12">
-        <section className="text-center mb-12 mt-10">
-          <h2 className="text-3xl font-semibold mb-4">Why Choose Us?</h2>
-          <p className="text-lg text-gray-700">
-            At Pravaasa Bliss, we offer customized travel solutions to make your
-            journeys unforgettable. Our dedicated team ensures exceptional
-            service and unique experiences tailored just for you.
-          </p>
-        </section>
-
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="w-16 h-16 bg-blue-500 rounded-full mb-4 flex items-center justify-center">
-              <Image
-                src="/images/hot-air-balloon.gif"
-                alt="Adventure"
-                width={60}
-                height={60}
-                unoptimized
-              />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Adventure Tours</h3>
-            <p className="text-gray-600">
-              Explore breathtaking landscapes and experience thrilling
-              adventures with our expertly crafted tours.
+          <section className="text-center mb-12 mt-10">
+            <h2 className="text-3xl font-semibold mb-4">Why Choose Us?</h2>
+            <p className="text-lg text-gray-700">
+              At Pravaasa Bliss, we offer customized travel solutions to make
+              your journeys unforgettable. Our dedicated team ensures
+              exceptional service and unique experiences tailored just for you.
             </p>
-          </div>
+          </section>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="w-16 h-16 bg-green-500 rounded-full mb-4 flex items-center justify-center">
-              <Image
-                src="/images/clipboard.gif"
-                alt="Relaxation"
-                width={60}
-                height={60}
-                unoptimized
-              />
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="w-16 h-16 bg-blue-500 rounded-full mb-4 flex items-center justify-center">
+                <Image
+                  src="/images/hot-air-balloon.gif"
+                  alt="Adventure"
+                  width={60}
+                  height={60}
+                  unoptimized
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Adventure Tours</h3>
+              <p className="text-gray-600">
+                Explore breathtaking landscapes and experience thrilling
+                adventures with our expertly crafted tours.
+              </p>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Relaxation Packages</h3>
-            <p className="text-gray-600">
-              Indulge in our luxury relaxation packages designed to rejuvenate
-              and refresh you.
-            </p>
-          </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="w-16 h-16 bg-red-500 rounded-full mb-4 flex items-center justify-center">
-              <Image
-                src="/images/namaste.gif"
-                alt="Culture"
-                width={60}
-                height={60}
-                unoptimized
-              />
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="w-16 h-16 bg-green-500 rounded-full mb-4 flex items-center justify-center">
+                <Image
+                  src="/images/clipboard.gif"
+                  alt="Relaxation"
+                  width={60}
+                  height={60}
+                  unoptimized
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">
+                Relaxation Packages
+              </h3>
+              <p className="text-gray-600">
+                Indulge in our luxury relaxation packages designed to rejuvenate
+                and refresh you.
+              </p>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Cultural Experiences</h3>
-            <p className="text-gray-600">
-              Immerse yourself in rich cultural experiences with our curated
-              cultural tours and activities.
-            </p>
-          </div>
-        </section>
+
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="w-16 h-16 bg-red-500 rounded-full mb-4 flex items-center justify-center">
+                <Image
+                  src="/images/namaste.gif"
+                  alt="Culture"
+                  width={60}
+                  height={60}
+                  unoptimized
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">
+                Cultural Experiences
+              </h3>
+              <p className="text-gray-600">
+                Immerse yourself in rich cultural experiences with our curated
+                cultural tours and activities.
+              </p>
+            </div>
+          </section>
         </section>
         {/* some servies section  */}
         <section className="container mx-auto px-4 py-8 md:px-8">
@@ -188,9 +243,11 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Service 1 */}
             <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img
+              <Image
                 src="/images/service1.jpg"
                 alt="Customized Itineraries"
+                width={500} // Adjust based on the image's original width or the desired display width
+                height={300} // Adjust based on the image's original height or the desired display height
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
@@ -213,9 +270,11 @@ export default function Home() {
 
             {/* Service 2 */}
             <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img
+              <Image
                 src="/images/service2.jpg"
                 alt="24/7 Travel Support"
+                width={500}
+                height={300}
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
@@ -238,9 +297,11 @@ export default function Home() {
 
             {/* Service 3 */}
             <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img
+              <Image
                 src="/images/service3.jpg"
                 alt="Exclusive Travel Packages"
+                width={500} // Adjust based on the desired display width
+                height={300} // Adjust based on the desired display height
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
