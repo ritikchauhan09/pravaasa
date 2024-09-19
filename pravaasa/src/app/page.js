@@ -4,6 +4,7 @@ import Image from "next/image";
 import "../app/globals.css";
 import { useState, useEffect } from "react";
 import SplashScreen from "../components/splashScreen";
+import Modal from "@/components/Modal";
 // import RootLayout from './layout';
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -50,6 +51,7 @@ export default function Home() {
         <meta property="og:url" content="https://www.pravaasabliss.com" />
       </Head>
 
+<Modal/>
       {/* header */}
       <header
         className="relative w-full h-[73vh] bg-cover bg-center"
