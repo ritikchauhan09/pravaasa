@@ -1,6 +1,7 @@
 // pages/destinations.js
 import Head from "next/head";
 import Image from "next/image";
+
 const topDestinations = [
   {
     name: "Goa",
@@ -123,8 +124,7 @@ const Destinations = () => {
                   alt={destination.name}
                   width={500}
                   height={300}
-                  layout="responsive"
-                  className="w-full h-48 object-cover"
+                  className="w-full h-64 object-cover"
                   priority
                 />
                 <div className="p-6">
@@ -145,19 +145,18 @@ const Destinations = () => {
               Explore every travel destination in India with detailed insights and beautiful imagery.
             </p>
           </header>
-          <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 ">
+          <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {allDestinations.map((destination) => (
               <div
                 key={destination.name}
                 className="bg-white shadow-md rounded-lg overflow-hidden"
               >
-                 <Image
+                <Image
                   src={destination.image}
                   alt={destination.name}
                   width={500}
                   height={300}
-                  layout="responsive"
-                  className="w-full h-48 object-cover"
+                  className="w-full h-64 object-cover"
                   loading="lazy"
                 />
                 <div className="p-6">

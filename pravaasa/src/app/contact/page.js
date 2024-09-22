@@ -44,20 +44,20 @@ const Contact = () => {
               </p>
               <p className="text-lg font-semibold mt-4 text-center">
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+918988336969"
                   className="text-blue-600 hover:underline"
                 >
-                  +1 (234) 567-890
+                  +91 8988336969 
                 </a>
               </p>
-              <p className="text-lg font-semibold mt-4 text-center">
+              {/* <p className="text-lg font-semibold mt-4 text-center">
                 <a
                   href="tel:+1234567890"
                   className="text-blue-600 hover:underline"
                 >
                   +1 (234) 567-890
                 </a>
-              </p>
+              </p> */}
             </div>
           </div>
 
@@ -102,10 +102,8 @@ const Contact = () => {
             <div className="w-full lg:w-1/2 bg-gray-100 p-4 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4">Find Us On the Map</h3>
               {/* Embed or include a map component here */}
-              <div className="h-64 bg-gray-300 flex items-center justify-center">
-                {/* Example placeholder for the map */}
-                <p className="text-gray-500">Map placeholder</p>
-              </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3415.9089104054488!2d77.51539532568582!3d31.112263674403476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sVill.%20Dhangvi%20Post%20Office.%20Kokunala%2C%20Dhangwi%20Kalan%20(145)%2C%20Shimla%2C%20Himachal%20Pradesh%2C%20171202!5e0!3m2!1sen!2sin!4v1727000013055!5m2!1sen!2sin" width={600} height={450} style={{border:"0"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              
             </div>
 
             {/* Contact Information */}
@@ -113,24 +111,24 @@ const Contact = () => {
               <h3 className="text-xl font-bold mb-4">Contact Information</h3>
               <address className="text-gray-700">
                 <p className="mb-2">
-                  Address: 123 Travel Lane, Vacation City, 45678
+                  Vill. Dhangvi Post Office. Kokunala, Dhangwi Kalan (145), Shimla, Himachal Pradesh, 171202
                 </p>
                 <p className="mb-2">
                   Phone:{" "}
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+918988336969"
                     className="text-blue-600 hover:underline"
                   >
-                    +1 (234) 567-890
+                    +91 8988336969
                   </a>
                 </p>
                 <p>
                   Email:{" "}
                   <a
-                    href="mailto:support@pravaasabliss.com"
+                    href="mailto:Chauhanmukil@gmail.com"
                     className="text-blue-600 hover:underline"
                   >
-                    support@pravaasabliss.com
+                    Chauhanmukil@gmail.com
                   </a>
                 </p>
               </address>

@@ -51,21 +51,21 @@ export default function Footer() {
             <address className="not-italic">
               <div className="flex items-center mb-2 text-sm">
                 <Image src="/images/location.png" alt="address logo" width={20} height={20} className="mr-2"/>
-                <p>123 Travel Lane, Wanderlust City, XY 12345</p>
+                <p>Vill Dhangwi, PO. Kotkhai, Shimla - 171202</p>
               </div>
               <div className="flex items-center mb-2 text-sm">
                 <Image src="/images/call.png" alt="phone logo" width={20} height={20} className="mr-2"/>
                 <p>
-                  <Link href="tel:+1234567890" className="hover:underline">
-                    +1 (234) 567-890
+                  <Link href="tel:+918988336969" className="hover:underline">
+                  +91 8988336969
                   </Link>
                 </p>
               </div>
               <div className="flex items-center mb-2 text-sm">
                 <Image src="/images/communication.png" alt="email logo" width={20} height={20} className="mr-2"/>
                 <p>
-                  <Link href="mailto:info@pravaasabliss.com" className="hover:underline">
-                    info@pravaasabliss.com
+                  <Link href="mailto:Chauhanmukil@gmail.com" className="hover:underline">
+                  Chauhanmukil@gmail.com
                   </Link>
                 </p>
               </div>

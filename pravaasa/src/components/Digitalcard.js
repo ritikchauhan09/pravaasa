@@ -25,8 +25,8 @@ const DigitalCard = () => {
           <div>
             <h2 className="text-2xl font-bold">Contact Us</h2>
             <p className="mt-2">Name: Pravaasa Bliss</p>
-            <p className="mt-2">Phone: <a href="tel:+1234567890" className="text-blue-600 hover:underline">+1 (234) 567-890</a></p>
-            <p className="mt-2">Email: <a href="mailto:support@pravaasabliss.com" className="text-blue-600 hover:underline">support@pravaasabliss.com</a></p>
+            <p className="mt-2">Phone: <a href="tel:+918988336969" className="text-blue-600 hover:underline">+91 8988336969</a></p>
+            <p className="mt-2">Email: <a href="mailto:Chauhanmukil@gmail.com" className="text-blue-600 hover:underline">Chauhanmukil@gmail.com</a></p>
           </div>
         </div>
       </div>
