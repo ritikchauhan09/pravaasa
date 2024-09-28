@@ -111,7 +111,8 @@ const Contact = () => {
               <h3 className="text-xl font-bold mb-4">Contact Information</h3>
               <address className="text-gray-700">
                 <p className="mb-2">
-                  Vill. Dhangvi Post Office. Kokunala, Dhangwi Kalan (145), Shimla, Himachal Pradesh, 171202
+                  Address:
+                  Vill. Dhangvi Post Office.<br/> Kokunala, Dhangwi Kalan (145), Shimla, <br/> Himachal Pradesh, 171202
                 </p>
                 <p className="mb-2">
                   Phone:{" "}

@@ -217,16 +217,18 @@ const AboutUs = () => {
             {/* Team Member 1 */}
             <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
               <div className="flex justify-center p-4">
-                <img
-                  src="/images/team-member-1.jpg"
-                  alt="John Doe"
-                  className="w-24 h-24 object-cover rounded-full border-4 border-gray-300"
+                <Image
+                  src="/images/mukil1.jpg"
+                  height={150}
+                  width={150}
+                  alt="mukil chauhan"
+                  className="rounded-full border-4 border-gray-300 w-40 h-40"
                 />
               </div>
               <div className="p-4 text-center">
-                <h2 className="text-xl font-bold mb-2">John Doe</h2>
+                <h2 className="text-xl font-bold mb-2">Mukil Chauhan</h2>
                 <p className="text-gray-600">
-                  Lead Travel Consultant with 10 years of experience in crafting
+                  Lead Travel Consultant crafting
                   unforgettable travel experiences. Passionate about cultural
                   immersion and personalized service.
                 </p>
@@ -236,37 +238,20 @@ const AboutUs = () => {
             {/* Team Member 2 */}
             <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
               <div className="flex justify-center p-4">
-                <img
-                  src="/images/team-member-2.jpg"
-                  alt="Jane Smith"
-                  className="w-24 h-24 object-cover rounded-full border-4 border-gray-300"
+                <Image
+                  src="/images/ritik.jpeg"
+                  height={150}
+                  width={150}
+                  alt="ritik chauhan"
+                  className="rounded-full border-4 border-gray-300 w-40 h-40"
                 />
               </div>
               <div className="p-4 text-center">
-                <h2 className="text-xl font-bold mb-2">Jane Smith</h2>
+                <h2 className="text-xl font-bold mb-2">Ritik Chauhan</h2>
                 <p className="text-gray-600">
                   Senior Travel Planner specializing in adventure and luxury
                   travel. Dedicated to creating bespoke itineraries that exceed
                   client expectations.
-                </p>
-              </div>
-            </div>
-
-            {/* Team Member 3 */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
-              <div className="flex justify-center p-4">
-                <img
-                  src="/images/team-member-3.jpg"
-                  alt="Michael Brown"
-                  className="w-24 h-24 object-cover rounded-full border-4 border-gray-300"
-                />
-              </div>
-              <div className="p-4 text-center">
-                <h2 className="text-xl font-bold mb-2">Michael Brown</h2>
-                <p className="text-gray-600">
-                  Travel Specialist with a focus on cultural and educational
-                  travel. Committed to delivering enriching travel experiences
-                  and exceptional customer service.
                 </p>
               </div>
             </div>
@@ -275,6 +260,5 @@ const AboutUs = () => {
       </main>
     </>
   );
-};
-
+}
 export default AboutUs;
