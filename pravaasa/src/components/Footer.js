@@ -8,7 +8,7 @@ export default function Footer() {
       <div className=" max-w-full container mx-auto px-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center md:items-start ml-5">
             <Image
               src="/images/pravaasa.png"
               alt="company logo"
@@ -18,14 +18,14 @@ export default function Footer() {
             <h2 className="text-xl font-bold mb-2" itemProp="name">
               Tour & Travel
             </h2>
-            <p itemProp="description" className="text-sm">
-              Explore the world with us. We offer the best travel packages and
+            <p itemProp="description" className="text-sm text-justify">
+              Explore the world with us. We offer the <br/> best travel packages and
               experiences.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="text-center">
+          <div className="text-left ml-7">
             <h2 className="font-bold mb-4 text-lg">Quick Links</h2>
             <ul>
               <li>
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left mr-10">
             <h2 className="font-bold mb-4 text-lg">Contact Info</h2>
             <address className="not-italic">
               <div className="flex items-center mb-2 text-sm">
@@ -89,9 +89,9 @@ export default function Footer() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <rect x="6" y="2" width="12" height="20" rx="2" ry="2"></rect>
                   <line x1="12" y1="18" x2="12" y2="18"></line>
@@ -113,9 +113,9 @@ export default function Footer() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path d="M22 5v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path>
                   <path d="M22 7l-10 7L2 7"></path>
@@ -174,12 +174,12 @@ export default function Footer() {
           </div>
           <div className="flex justify-center md:justify-end w-full md:w-auto p-3">
             {/* Social Media Icons */}
-            <Link href="/" className="mx-2">
+            <Link href="/" className="mx-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                width="30"
-                height="30"
+                width="25"
+                height="25"
               >
                 <path
                   fill="#FFFFFF"
@@ -187,43 +187,43 @@ export default function Footer() {
                 />
               </svg>
             </Link>
-            <Link href="/" className="mx-2">
+            <Link href="/" className="mx-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
+                width="25"
+                height="25"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 2c-2.47 0-4.48 2-4.48 4.5v.9A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
               </svg>
             </Link>
-            <Link href="/" className="mx-2">
+            <Link href="/" className="mx-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
+                width="25"
+                height="25"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <circle cx="12" cy="12" r="3.5"></circle>
                 <line x1="18" y1="6" x2="18.01" y2="6"></line>
               </svg>
             </Link>
-            <Link href="/" className="mx-2">
+            <Link href="/" className="mx-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
+                width="25"
+                height="25"
                 viewBox="0 0 48 48"
                 fill="white"
               >
@@ -237,3 +237,4 @@ export default function Footer() {
     </footer>
   );
 }
+
