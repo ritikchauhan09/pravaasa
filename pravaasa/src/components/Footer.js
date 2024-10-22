@@ -178,8 +178,8 @@ export default function Footer() {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                width="25"
-                height="25"
+                width="20"
+                height="20"
               >
                 <path
                   fill="#FFFFFF"
@@ -190,8 +190,8 @@ export default function Footer() {
             <Link href="/" className="mx-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="white"
@@ -205,8 +205,8 @@ export default function Footer() {
             <Link href="/" className="mx-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="white"
@@ -222,8 +222,8 @@ export default function Footer() {
             <Link href="/" className="mx-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
+                width="20"
+                height="20"
                 viewBox="0 0 48 48"
                 fill="white"
               >

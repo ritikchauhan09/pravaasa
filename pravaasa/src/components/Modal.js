@@ -70,7 +70,7 @@ const Modal = () => {
 
               <button
                 onClick={closeModal}
-                className="absolute top-0 right-0 text-gray-500 hover:text-gray-700 focus:outline-none"
+                className="absolute top-0 right-0 text-gray-500 hover:text-gray-700 focus:outline-none text-2xl"
               >
                 &times;
               </button>
