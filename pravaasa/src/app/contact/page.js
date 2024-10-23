@@ -100,19 +100,22 @@ const Contact = () => {
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Map Section */}
             <div className="w-full lg:w-1/2 bg-gray-100 p-4 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4">Find Us On the Map</h3>
+            <h3 className="text-xl font-bold mb-4 flex items-center">
+  Find Us On the Map
+  <Image src="/images/search.gif" height={30} width={30} alt="search on map" className="ml-2 bg-red-100"/>
+</h3>
               {/* Embed or include a map component here */}
               <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3415.9089104054488!2d77.51539532568582!3d31.112263674403476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sVill.%20Dhangvi%20Post%20Office.%20Kokunala%2C%20Dhangwi%20Kalan%20(145)%2C%20Shimla%2C%20Himachal%20Pradesh%2C%20171202!5e0!3m2!1sen!2sin!4v1727000013055!5m2!1sen!2sin" width={600} height={450} style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               
             </div>
 
             {/* Contact Information */}
-            <div className="w-full lg:w-1/2 bg-gray-100 p-4 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4">Contact Information</h3>
-              <address className="text-gray-700">
+            <div className="w-full lg:w-1/2 bg-gray-100 rounded-lg shadow-md" style={{backgroundImage:'url("/images/contactinfo.jpg")', backgroundSize:"100% 100%", height:"40vh"}}>
+              <h3 className="text-4xl text-white font-bold mb-4 mt-36">Contact Information</h3>
+              <address className="text-gray-700 mt-40 font-bold bg-grey-100">
                 <p className="mb-2">
                   Address:
-                  Vill. Dhangvi Post Office.<br/> Kokunala, Dhangwi Kalan (145), Shimla, <br/> Himachal Pradesh, 171202
+                  Vill. Dhangvi Post Office.<br/> Kokunala, Dhangwi Kalan (145), <br/> Shimla, Himachal Pradesh, 171202
                 </p>
                 <p className="mb-2">
                   Phone:{" "}
