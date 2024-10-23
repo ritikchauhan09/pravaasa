@@ -235,11 +235,12 @@ const PrivacyPolicy = () => {
           <p className="text-base mb-4">
             <strong>Pravaasa Bliss</strong>
             <br />
-            Email: [your-email@example.com]
+            Email: chauhanmukil@gmail.com
             <br />
-            Phone: [your-phone-number]
+            Phone: +91 8988336969
             <br />
-            Address: [your-company-address]
+            Address: Vill. Dhangvi Post Office. Kokunala, Dhangwi Kalan (145),
+            Shimla, Himachal Pradesh, 171202
           </p>
         </div>
       </main>
