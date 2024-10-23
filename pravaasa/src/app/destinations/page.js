@@ -104,7 +104,10 @@ const Destinations = () => {
       </Head>
 
       <main className="bg-gray-100">
-        <header className="bg-blue-200 text-white text-center py-12" style={{ backgroundImage: "url('/images/destination1.jpg')" }}>
+        <header
+          className="bg-blue-200 text-white text-center py-12"
+          style={{ backgroundImage: "url('/images/destination1.jpg')" }}
+        >
           <h1 className="text-4xl font-bold">Top Destinations in India</h1>
           <p className="text-lg mt-2">
             Discover the most amazing travel destinations across India with
@@ -139,10 +142,14 @@ const Destinations = () => {
         </section>
 
         <main className="bg-white mb-20">
-          <header className="bg-blue-200 text-white text-center py-12 my-20" style={{ backgroundImage: "url('/images/destination2.jpg')" }}>
+          <header
+            className="bg-blue-200 text-white text-center py-12 my-20"
+            style={{ backgroundImage: "url('/images/destination2.jpg')" }}
+          >
             <h2 className="text-3xl font-bold">All Destinations in India</h2>
             <p className="text-lg mt-2">
-              Explore every travel destination in India with detailed insights and beautiful imagery.
+              Explore every travel destination in India with detailed insights
+              and beautiful imagery.
             </p>
           </header>
           <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
