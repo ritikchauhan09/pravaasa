@@ -4,6 +4,7 @@ const Modal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   useEffect(() => {
     // Check localStorage to see if the modal has been shown before
@@ -20,39 +21,53 @@ const Modal = () => {
 
   // Validation function for phone number
   const validatePhoneNumber = (number) => {
-    const onlyNumbersPattern = /^\d+$/; // Pattern for digits only
-    const phonePattern = /^[6-9]\d{9}$/; // Indian phone number validation pattern
+    const onlyNumbersPattern = /^\d+$/;
+    const phonePattern = /^[6-9]\d{9}$/;
 
-    // Check if the phone number contains only digits
     if (!onlyNumbersPattern.test(number)) {
       return 'Phone number should contain only digits.';
     }
 
-    // Check if the length is exactly 10 digits
     if (number.length !== 10) {
       return 'Phone number must be exactly 10 digits long.';
     }
 
-    // Check if the phone number starts with a valid digit (6-9)
     if (!phonePattern.test(number)) {
       return 'Phone number must start with a digit between 6 and 9.';
     }
 
-    // If all validations pass, return an empty string (no error)
     return '';
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationError = validatePhoneNumber(phoneNumber);
 
     if (!validationError) {
-      // Store the phone number in localStorage if valid
-      localStorage.setItem('phoneNumber', phoneNumber);
-      // Close the modal
-      closeModal();
+      try {
+        // Send the phone number to the backend
+        const response = await fetch('http://localhost:4000/api/add-number', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ number: phoneNumber })
+        });
+
+        const result = await response.json();
+        if (response.ok) {
+          // Store the phone number in localStorage if valid
+          localStorage.setItem('phoneNumber', phoneNumber);
+          setSuccessMessage("Phone number saved successfully!");
+          closeModal();
+        } else {
+          setErrorMessage(result.message || 'Failed to save phone number.');
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        setErrorMessage("Failed to connect to the server.");
+      }
     } else {
-      // Set the error message if validation fails
       setErrorMessage(validationError);
     }
   };
@@ -102,6 +117,9 @@ const Modal = () => {
                 Submit
               </button>
             </form>
+            {successMessage && (
+              <p className="text-green-500 text-sm mt-4 text-center">{successMessage}</p>
+            )}
           </div>
         </div>
       )}
