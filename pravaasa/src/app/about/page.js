@@ -214,8 +214,8 @@ const AboutUs = () => {
           </p>
 
           <div className="flex flex-wrap justify-center gap-8 p-6 mt-8"> */}
-            {/* Team Member 1 */}
-            {/* <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
+        {/* Team Member 1 */}
+        {/* <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
               <div className="flex justify-center p-4">
                 <Image
                   src="/images/mukil1.jpg"
@@ -235,8 +235,8 @@ const AboutUs = () => {
               </div>
             </div> */}
 
-            {/* Team Member 2 */}
-            {/* <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
+        {/* Team Member 2 */}
+        {/* <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
               <div className="flex justify-center p-4">
                 <Image
                   src="/images/ritik.jpeg"
@@ -260,5 +260,5 @@ const AboutUs = () => {
       </main>
     </>
   );
-}
+};
 export default AboutUs;

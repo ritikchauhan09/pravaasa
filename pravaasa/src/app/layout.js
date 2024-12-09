@@ -7,16 +7,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "PRAVAASA BLISS",
-  description: "Discover unforgettable travel experiences with PRAVAASA BLISS. Explore top destinations, book tours and activities, and find travel tips to make your journey extraordinary.",
+  description:
+    "Discover unforgettable travel experiences with PRAVAASA BLISS. Explore top destinations, book tours and activities, and find travel tips to make your journey extraordinary.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-      <Navbar />
-      <main className="flex-grow">{children}</main>
-      <Footer/>
+        <Navbar />
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );

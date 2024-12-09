@@ -18,7 +18,8 @@ const Contact = () => {
             Unforgettable Travel Experiences
           </h1>
           <p className="text-white text-sm sm:text-base md:text-lg lg:mt-10">
-          &quot;Your next adventure starts here. Get in touch with us today!&quot;
+            &quot;Your next adventure starts here. Get in touch with us
+            today!&quot;
           </p>
         </div>
       </header>

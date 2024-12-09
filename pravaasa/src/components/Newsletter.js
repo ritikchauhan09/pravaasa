@@ -7,8 +7,8 @@ const Newsletter = () => (
         Subscribe to our Newsletter
       </h2>
       <p className="text-center text-white mb-8 text-sm">
-        Stay updated with the latest travel news <br/>and exclusive offers from
-        Pravaasa Bliss.
+        Stay updated with the latest travel news <br />
+        and exclusive offers from Pravaasa Bliss.
       </p>
       <form className="flex flex-col md:flex-row items-center justify-center gap-4">
         <label htmlFor="email" className="sr-only">

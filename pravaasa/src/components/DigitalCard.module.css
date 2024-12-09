@@ -21,7 +21,8 @@
   backface-visibility: hidden; /* Hides the back side when facing away */
 }
 
-.front, .back {
+.front,
+.back {
   display: flex;
   align-items: center;
   justify-content: center;

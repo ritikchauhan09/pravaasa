@@ -1,12 +1,12 @@
 // app/error.js
-'use client';  // Ensure this is a client component
+"use client"; // Ensure this is a client component
 
-import { useEffect } from 'react';
-import Link from 'next/link';
+import { useEffect } from "react";
+import Link from "next/link";
 
 export default function Error({ error, reset }) {
   useEffect(() => {
-    console.error(error);  // Log the error to the console
+    console.error(error); // Log the error to the console
   }, [error]);
 
   return (
@@ -21,7 +21,10 @@ export default function Error({ error, reset }) {
       >
         Try Again
       </button>
-      <Link href="/" className="mt-6 px-6 py-2 bg-blue-500 text-white text-lg font-semibold rounded-md hover:bg-blue-600 transition duration-200 ease-in-out">
+      <Link
+        href="/"
+        className="mt-6 px-6 py-2 bg-blue-500 text-white text-lg font-semibold rounded-md hover:bg-blue-600 transition duration-200 ease-in-out"
+      >
         Go Back Home
       </Link>
     </div>
