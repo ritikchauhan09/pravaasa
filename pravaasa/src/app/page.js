@@ -283,7 +283,7 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Receive round-the-clock assistance throughout your journey.
-                  We're here to ensure your travel experience is smooth and
+                  We&apos;re here to ensure your travel experience is smooth and
                   stress-free.
                 </p>
                 <a

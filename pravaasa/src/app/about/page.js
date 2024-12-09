@@ -190,7 +190,7 @@ const AboutUs = () => {
                 alt="Our Vision"
                 width={1200} // Replace with the actual width of the image
                 height={800} // Replace with the actual height of the image
-                layout="responsive"
+                // layout="responsive"
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -200,7 +200,7 @@ const AboutUs = () => {
         <hr className="w-11/12 mx-auto border-gray-400 my-12" />
 
         {/* Meet Our Team */}
-        <section>
+        {/* <section>
           <h3 className="text-xl md:text-2xl font-bold mb-2 text-center">
             Meet Our Team
           </h3>
@@ -213,9 +213,9 @@ const AboutUs = () => {
             adventure.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-8 p-6 mt-8">
+          <div className="flex flex-wrap justify-center gap-8 p-6 mt-8"> */}
             {/* Team Member 1 */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
+            {/* <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
               <div className="flex justify-center p-4">
                 <Image
                   src="/images/mukil1.jpg"
@@ -233,10 +233,10 @@ const AboutUs = () => {
                   immersion and personalized service.
                 </p>
               </div>
-            </div>
+            </div> */}
 
             {/* Team Member 2 */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
+            {/* <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
               <div className="flex justify-center p-4">
                 <Image
                   src="/images/ritik.jpeg"
@@ -256,7 +256,7 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </>
   );

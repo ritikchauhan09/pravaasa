@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,10 +79,14 @@ const Modal = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full mx-4">
             <div className="flex justify-center items-center relative">
-              <img
-                src='/images/mobile.jpg'
-                className="mx-auto w-72 h-72 rounded-full object-cover"
-              />
+            <Image
+  src="/images/mobile.jpg"
+  alt="Mobile"
+  className="mx-auto w-72 h-72 rounded-full object-cover"
+  width={288}  // 72 * 4 (for better resolution, adjust according to the layout)
+  height={288} // 72 * 4
+  priority  // Optional: Add if you want to preload this image (important for critical images)
+/>
 
               <button
                 onClick={closeModal}

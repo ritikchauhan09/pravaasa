@@ -14,10 +14,17 @@ export default function Terms() {
         />
       </Head>
       <header
-        className="bg-blue-200 text-white text-center py-24"
-        style={{ backgroundImage: 'url("/images/term-service.jpg")' }}
+        className="text-white text-center py-24"
+        style={{
+          backgroundImage: 'url("/images/term-service.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: "30vh", // or any specific height you want
+          width: "100%",
+        }}
       >
-        <h1 className="text-4xl font-bold mb-6 text-center text-white">
+        <h1 className="text-2xl lg:text-4xl font-bold mb-6 text-center text-white">
           Terms and Conditions
         </h1>
       </header>

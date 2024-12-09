@@ -38,15 +38,13 @@ const PrivacyPolicy = () => {
       {/* main */}
       <main className="bg-gray-100 min-h-screen py-8 px-4 md:px-8">
         <div className="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-          <p className="text-lg mb-4">
-            <strong>Effective Date:</strong> [Insert Date]
-          </p>
+          
           <p className="text-base mb-6">
             Welcome to Pravaasa Bliss. We are committed to protecting your
             personal information and your right to privacy. This Privacy Policy
             outlines how we collect, use, disclose, and safeguard your
-            information when you visit our website [www.yourwebsite.com] (the
-            "Site"). Please read this policy carefully.
+            information when you visit our website [www.yourwebsite.com]
+            . Please read this policy carefully.
           </p>
 
           <h2 className="text-xl font-semibold text-blue-800 mt-8 mb-4">

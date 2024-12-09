@@ -1,9 +1,17 @@
+import Image from 'next/image';
 import styles from './SplashScreen.module.css';
-import splashicon from "next/image"
+
 const SplashScreen = () => {
     return (
         <div className={styles.splashScreen}>
-            <img src='/images/splashicon.jpg' alt='splashscreenlogo' layout='responsive' height={300} width={300}/>
+            <Image
+                src="/images/splashicon.jpg"
+                alt="Splash Screen Logo"
+                width={400}
+                height={400}
+                priority
+                
+            />
         </div>
     );
 };
