@@ -1,16 +1,15 @@
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   useEffect(() => {
     // Check localStorage to see if the modal has been shown before
-    const storedPhoneNumber = localStorage.getItem('phoneNumber');
+    const storedPhoneNumber = localStorage.getItem("phoneNumber");
     if (!storedPhoneNumber) {
       // If no phone number is stored, show the modal
       setIsOpen(true);
@@ -27,18 +26,18 @@ const Modal = () => {
     const phonePattern = /^[6-9]\d{9}$/;
 
     if (!onlyNumbersPattern.test(number)) {
-      return 'Phone number should contain only digits.';
+      return "Phone number should contain only digits.";
     }
 
     if (number.length !== 10) {
-      return 'Phone number must be exactly 10 digits long.';
+      return "Phone number must be exactly 10 digits long.";
     }
 
     if (!phonePattern.test(number)) {
-      return 'Phone number must start with a digit between 6 and 9.';
+      return "Phone number must start with a digit between 6 and 9.";
     }
 
-    return '';
+    return "";
   };
 
   const handleSubmit = async (e) => {
@@ -48,22 +47,22 @@ const Modal = () => {
     if (!validationError) {
       try {
         // Send the phone number to the backend
-        const response = await fetch('http://localhost:4000/api/add-number', {
-          method: 'POST',
+        const response = await fetch("http://localhost:4000/api/add-number", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify({ number: phoneNumber })
+          body: JSON.stringify({ number: phoneNumber }),
         });
 
         const result = await response.json();
         if (response.ok) {
           // Store the phone number in localStorage if valid
-          localStorage.setItem('phoneNumber', phoneNumber);
+          localStorage.setItem("phoneNumber", phoneNumber);
           setSuccessMessage("Phone number saved successfully!");
           closeModal();
         } else {
-          setErrorMessage(result.message || 'Failed to save phone number.');
+          setErrorMessage(result.message || "Failed to save phone number.");
         }
       } catch (error) {
         console.error("Error:", error);
@@ -80,15 +79,15 @@ const Modal = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full mx-4">
             <div className="flex justify-center items-center relative">
-            <Image
-        src="/images/mobile.jpg" // Make sure this path is correct and the file is in the public directory.
-        alt="Mobile Image"
-        width={288} // Base size for large screens (18rem = 72 Tailwind units)
-        height={288}
-        className="rounded-full object-cover sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-72 lg:h-72"
-        // style={{ width: 'auto', height: 'auto' }} // Ensures responsiveness
-        priority // Optimizes image for loading
-      />
+              <Image
+                src="/images/mobile.jpg" // Make sure this path is correct and the file is in the public directory.
+                alt="Mobile Image"
+                width={288} // Base size for large screens (18rem = 72 Tailwind units)
+                height={288}
+                className="rounded-full object-cover sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-72 lg:h-72"
+                // style={{ width: 'auto', height: 'auto' }} // Ensures responsiveness
+                priority // Optimizes image for loading
+              />
 
               <button
                 onClick={closeModal}
@@ -98,7 +97,8 @@ const Modal = () => {
               </button>
             </div>
             <p className="mt-4 text-gray-700 text-lg font-medium text-center">
-              Enter your phone number to stay connected with us and unlock exclusive updates.
+              Enter your phone number to stay connected with us and unlock
+              exclusive updates.
             </p>
             <form onSubmit={handleSubmit} className="mt-4">
               <input
@@ -107,10 +107,10 @@ const Modal = () => {
                 value={phoneNumber}
                 onChange={(e) => {
                   setPhoneNumber(e.target.value);
-                  setErrorMessage(''); // Clear error message on input change
+                  setErrorMessage(""); // Clear error message on input change
                 }}
                 className={`border p-2 rounded w-full mb-4 ${
-                  errorMessage ? 'border-red-500' : 'border-gray-300'
+                  errorMessage ? "border-red-500" : "border-gray-300"
                 }`}
                 required
               />
@@ -125,7 +125,9 @@ const Modal = () => {
               </button>
             </form>
             {successMessage && (
-              <p className="text-green-500 text-sm mt-4 text-center">{successMessage}</p>
+              <p className="text-green-500 text-sm mt-4 text-center">
+                {successMessage}
+              </p>
             )}
           </div>
         </div>

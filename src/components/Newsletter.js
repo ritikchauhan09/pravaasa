@@ -3,7 +3,7 @@ import React from "react";
 const Newsletter = () => (
   <section aria-label="Newsletter Subscription" className="bg-black-900">
     <div className="container mx-auto px-4">
-      <h2 className="text-lg font-bold text-center text-white mb-4">
+      <h2 className="text-xl font-bold text-center text-white mb-4">
         Subscribe to our Newsletter
       </h2>
       <p className="text-center text-white mb-8 text-sm">
@@ -18,7 +18,7 @@ const Newsletter = () => (
           type="email"
           id="email"
           placeholder="Enter your email"
-          className="p-2 rounded-md border border-gray-300 w-full md:w-4/5 lg:w-3/5"
+          className="p-2 rounded-md border border-gray-300 w-full md:w-4/5 lg:w-3/5 text-center"
           required
         />
         <button
