@@ -62,7 +62,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
               Welcome to <span className="text-yellow-500">Pravaasa Bliss</span>
             </h1>
-            <p className="text-lg md:text-2xl mb-8">
+            <p className="md:text-xl mb-8">
               Your gateway to unforgettable travel experiences. Discover the
               world with us!
             </p>
@@ -81,7 +81,7 @@ export default function Home() {
         {/* top destinations */}
         <section className="bg-emerald-900 text-white text-center py-12 rounded-lg">
           <h1 className="text-4xl font-bold">Top Destinations in India</h1>
-          <p className="text-lg mt-2">
+          <p className=" mt-2">
             Discover the most amazing travel destinations across India with
             Pravaasa Bliss.
           </p>
@@ -173,10 +173,10 @@ export default function Home() {
         <section className="mt-12">
           <section className="text-center mb-12 mt-10">
             <h2 className="text-3xl font-semibold mb-4">Why Choose Us?</h2>
-            <p className="text-lg text-gray-700">
+            <p className=" text-gray-700">
               At Pravaasa Bliss, we offer customized travel solutions to make
               your journeys unforgettable. Our dedicated team ensures
-              exceptional service and unique experiences tailored just for you........
+              exceptional service and unique experiences tailored just for you.
             </p>
           </section>
 
@@ -237,24 +237,27 @@ export default function Home() {
             </div>
           </section>
         </section>
+
         {/* some servies section  */}
-        <section className="container mx-auto px-4 py-8 md:px-8">
-          <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
+        <section className="bg-blue-300 container mx-auto px-4 py-8 md:px-8  py-12 rounded-lg">
+          <h2 className="text-4xl font-bold text-center mb-8 text-white">
+            Our Services
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Service 1 */}
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <div className="bg-white shadow-md rounded-lg overflow-hidden p-4">
               <Image
                 src="/images/service1.jpg"
                 alt="Customized Itineraries"
                 width={500} // Adjust based on the image's original width or the desired display width
                 height={300} // Adjust based on the image's original height or the desired display height
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover rounded-t-lg"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-2">
+                <h3 className="text-xl md:text-2xl lg:text-2xl font-semibold mb-2">
                   Customized Itineraries
                 </h3>
-                <p className="text-gray-700 mb-4">
+                <p className=" text-gray-700 mb-4">
                   Tailored travel plans to match your unique preferences and
                   interests. Enjoy a personalized experience that suits your
                   style.
@@ -269,16 +272,16 @@ export default function Home() {
             </div>
 
             {/* Service 2 */}
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <div className="bg-white shadow-md rounded-lg overflow-hidden p-4">
               <Image
                 src="/images/service2.jpg"
                 alt="24/7 Travel Support"
                 width={500}
                 height={300}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover rounded-t-lg"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-2">
+                <h3 className="text-xl md:text-2xl lg:text-2xl font-semibold mb-2">
                   24/7 Travel Support
                 </h3>
                 <p className="text-gray-700 mb-4">
@@ -296,16 +299,16 @@ export default function Home() {
             </div>
 
             {/* Service 3 */}
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <div className="bg-white shadow-md rounded-lg overflow-hidden p-4">
               <Image
                 src="/images/service3.jpg"
                 alt="Exclusive Travel Packages"
                 width={500} // Adjust based on the desired display width
                 height={300} // Adjust based on the desired display height
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover rounded-t-lg"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-2">
+                <h3 className="text-xl md:text-2xl lg:text-2xl font-semibold mb-2">
                   Exclusive Travel Packages
                 </h3>
                 <p className="text-gray-700 mb-4">
@@ -326,8 +329,10 @@ export default function Home() {
 
         {/* get started with us */}
         <section className="text-center mb-12 mt-8 rounded-lg shadow-md p-10">
-          <h2 className="text-3xl font-semibold mb-4">Get Started with Us</h2>
-          <p className="text-lg text-gray-700 mb-4">
+          <h2 className="text-xl md:text2xl lg:text-3xl font-semibold mb-4 ">
+            Get Started with Us
+          </h2>
+          <p className="text-gray-700 mb-4">
             Ready to start your adventure?{" "}
             <a href="/contact" className="text-yellow-500 hover:underline">
               Contact us

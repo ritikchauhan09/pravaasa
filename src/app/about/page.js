@@ -30,7 +30,7 @@ const AboutUs = () => {
         className="relative w-full h-48 md:h-72 lg:h-80 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/aboutus.jpg')" }}
       >
-        <h1 className="absolute inset-0 flex items-center justify-center text-white text-3xl md:text-6xl font-bold bg-black bg-opacity-50 p-4">
+        <h1 className="absolute inset-0 flex items-center justify-center text-white text-4xl md:text-6xl font-bold bg-black bg-opacity-50 p-4">
           About Us
         </h1>
       </header>
@@ -38,10 +38,10 @@ const AboutUs = () => {
       <main className="p-4 md:p-8 lg:p-12 bg-white">
         {/* Welcome Company Intro */}
         <section className="mb-8 shadow-lg rounded-lg p-6 bg-gray-50">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          <h2 className="text-3xl  font-bold mb-4">
             Welcome to Pravaasa Bliss
           </h2>
-          <p className="text-lg text-gray-700">
+          <p className="text-gray-700">
             At Pravaasa Bliss, we are dedicated to transforming your travel
             dreams into unforgettable experiences. As a premier travel agency,
             our goal is to provide exceptional, personalized travel services
@@ -64,9 +64,9 @@ const AboutUs = () => {
         </section>
 
         {/* Our Mission */}
-        <section className="mb-8 mt-12">
-          <h3 className="text-xl md:text-2xl font-bold mb-2">Our Mission</h3>
-          <p className="text-lg text-gray-700">
+        <section className="mb-8 mt-12 px-6">
+          <h3 className="text-2xl md:text-2xl font-bold mb-2">Our Mission</h3>
+          <p className=" text-gray-700">
             At Pravaasa Bliss, our mission is to redefine travel by delivering
             exceptional and personalized experiences that cater to the diverse
             needs of our clients. We are committed to transforming ordinary
@@ -85,8 +85,9 @@ const AboutUs = () => {
               className="w-full h-auto object-cover rounded-lg shadow-lg"
             />
           </div>
-          <div className="w-full md:w-1/2 md:pl-8 text-lg text-gray-700">
-            <span className="font-bold text-3xl">Why Choose Us?</span>
+          {/* why choose us */}
+          <div className="w-full px-6 md:w-1/2 md:pl-8  text-gray-700">
+            <span className="font-bold text-2xl">Why Choose Us?</span>
             <ul className="mt-4 list-disc list-inside">
               <li className="mb-2">
                 <span className="font-bold">Customized Travel Solutions:</span>{" "}
@@ -128,10 +129,10 @@ const AboutUs = () => {
         <hr className="w-11/12 mx-auto border-gray-400 my-12" />
 
         {/* Our Vision */}
-        <section className="items-center">
+        <section className="items-center px-6">
           <div className="mb-4">
-            <h3 className="text-xl md:text-2xl font-bold mb-2">Our Vision</h3>
-            <p className="text-lg text-gray-700">
+            <h3 className="text-2xl md:text-2xl lg:text-4xl font-bold mb-2">Our Vision</h3>
+            <p className=" text-gray-700">
               At Pravaasa Bliss, our vision is to set the standard for
               exceptional travel experiences by combining innovation,
               authenticity, and unmatched service. We aspire to be the leading
@@ -140,8 +141,8 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="flex flex-col md:flex-row">
-            <div className="w-full md:w-1/2 md:pr-8 mb-4 md:mb-0 text-lg text-gray-700">
-              <span className="font-bold text-3xl">
+            <div className="w-full md:w-1/2 md:pr-8 mb-4 md:mb-0  text-gray-700">
+              <span className="font-bold text-2xl">
                 Key Aspects of Our Vision:
               </span>
               <ul className="mt-4 list-disc list-inside">
@@ -200,12 +201,12 @@ const AboutUs = () => {
         <hr className="w-11/12 mx-auto border-gray-400 my-12" />
 
         {/* Meet Our Team */}
-        <section>
-          <h3 className="text-xl md:text-2xl font-bold mb-2 text-center">
+        {/* <section>
+          <h3 className="text-2xl md:text-2xl font-bold mb-2 text-center">
             Meet Our Team
           </h3>
           <hr className="mx-auto border-gray-400 w-44" />
-          <p className="text-lg text-gray-700 mt-8 text-center">
+          <p className=" text-gray-700 mt-8 text-center">
             Our dedicated team of travel experts is the heart of Pravaasa Bliss.
             Each member brings a wealth of knowledge, passion, and experience to
             ensure that your travel plans are executed flawlessly. Get to know
@@ -213,9 +214,9 @@ const AboutUs = () => {
             adventure.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-8 p-6 mt-8">
+          <div className="flex flex-wrap justify-center gap-8 p-6 mt-8"> */}
             {/* Team Member 1 */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
+            {/* <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
               <div className="flex justify-center p-4">
                 <Image
                   src="/images/mukil1.jpg"
@@ -233,10 +234,10 @@ const AboutUs = () => {
                   immersion and personalized service.
                 </p>
               </div>
-            </div>
+            </div> */}
 
             {/* Team Member 2 */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
+            {/* <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm">
               <div className="flex justify-center p-4">
                 <Image
                   src="/images/ritik.jpeg"
@@ -256,7 +257,7 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </>
   );
