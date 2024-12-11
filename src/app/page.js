@@ -176,7 +176,7 @@ export default function Home() {
             <p className="text-lg text-gray-700">
               At Pravaasa Bliss, we offer customized travel solutions to make
               your journeys unforgettable. Our dedicated team ensures
-              exceptional service and unique experiences tailored just for you.
+              exceptional service and unique experiences tailored just for you........
             </p>
           </section>
 
