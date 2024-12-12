@@ -84,7 +84,7 @@ const Modal = () => {
                 alt="Mobile Image"
                 width={288} // Base size for large screens (18rem = 72 Tailwind units)
                 height={288}
-                className="rounded-full object-cover sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-72 lg:h-72"
+                className="rounded-full object-cover w-48 h-48 md:w-56 md:h-56 lg:w-72 lg:h-72"
                 // style={{ width: 'auto', height: 'auto' }} // Ensures responsiveness
                 priority // Optimizes image for loading
               />
