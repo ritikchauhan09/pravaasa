@@ -39,7 +39,7 @@ const Modal = () => {
 
     return "";
   };
-
+  const api_url_add_num = WEBSITE_URL+"api/add-number";
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationError = validatePhoneNumber(phoneNumber);
@@ -47,7 +47,7 @@ const Modal = () => {
     if (!validationError) {
       try {
         // Send the phone number to the backend
-        const response = await fetch("http://localhost:4000/api/add-number", {
+        const response = await fetch(api_url_add_num, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
