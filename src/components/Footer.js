@@ -124,7 +124,7 @@ export default function Footer() {
                     href="mailto:Chauhanmukil@gmail.com"
                     className="hover:underline"
                   >
-                    Chauhanmukil@gmail.com
+                    pravaasabliss@gmail.com
                   </Link>
                 </p>
               </div>
@@ -172,7 +172,7 @@ export default function Footer() {
             {/* Social Media Icons */}
             <div className="flex space-x-4">
               <Link
-                href="https://www.youtube.com"
+                href="https://www.youtube.com/channel/UCWnchoUqzwa0mGgSp7TqYKQ"
                 title="YouTube"
                 target="_blank"
               >
@@ -190,7 +190,7 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/profile.php?id=61570386391222"
                 title="Facebook"
                 target="_blank"
               >
@@ -208,7 +208,7 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/pravaasa_bliss/"
                 title="Instagram"
                 target="_blank"
               >
@@ -226,7 +226,7 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href="https://www.twitter.com"
+                href="https://x.com/pravaasabliss"
                 title="Twitter"
                 target="_blank"
               >
