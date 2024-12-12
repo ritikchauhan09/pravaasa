@@ -39,7 +39,8 @@ const Modal = () => {
 
     return "";
   };
-  const api_url_add_num = WEBSITE_URL+"api/add-number";
+  const api_url_add_num = process.env.NEXT_PUBLIC_WEBSITE_URL+"api/add-number";
+  console.log(api_url_add_num)
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationError = validatePhoneNumber(phoneNumber);
