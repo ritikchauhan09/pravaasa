@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const DigitalCard = () => {
   return (
-    <div className={`flex items-center justify-center p-10 ${styles.perspective}`}>
+    <div className={`flex items-center justify-center p-3 mb-10 ${styles.perspective}`}>
       <div className={styles.cardContainer}>
         {/* Front Side */}
         <div className={`${styles.card} ${styles.front}`}>
