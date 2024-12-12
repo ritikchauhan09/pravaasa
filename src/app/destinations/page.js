@@ -109,13 +109,13 @@ const Destinations = () => {
           style={{ backgroundImage: "url('/images/destination1.jpg')" }}
         >
           <h1 className="text-4xl font-bold">Top Destinations in India</h1>
-          <p className="text-lg mt-2">
+          <p className="md:text-lg mt-2">
             Discover the most amazing travel destinations across India with
             Pravaasa Bliss.
           </p>
         </header>
 
-        <section className="py-8 px-4 md:px-8">
+        <section className="py-8 px-6 md:px-8">
           <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {topDestinations.map((destination) => (
               <div
@@ -143,16 +143,16 @@ const Destinations = () => {
 
         <main className="bg-white mb-20">
           <header
-            className="bg-blue-200 text-white text-center py-12 my-20"
+            className="bg-blue-200 text-white text-center py-16 my-20"
             style={{ backgroundImage: "url('/images/destination2.jpg')" }}
           >
-            <h2 className="text-3xl font-bold">All Destinations in India</h2>
-            <p className="text-lg mt-2">
+            <h2 className="text-4xl font-bold">All Destinations in India</h2>
+            <p className="md:text-lg mt-2">
               Explore every travel destination in India with detailed insights
               and beautiful imagery.
             </p>
           </header>
-          <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-6 md:px-0">
             {allDestinations.map((destination) => (
               <div
                 key={destination.name}
