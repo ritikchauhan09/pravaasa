@@ -41,7 +41,7 @@ const Modal = () => {
     return "";
   };
 
-  const api_url_add_num = process.env.NEXT_PUBLIC_WEBSITE_URL+"api/add-number";
+  const api_url_add_num = process.env.NEXT_PUBLIC_WEBSITE_URL + "api/add-number";
   const handleSubmit = async (e) => {
     console.log(api_url_add_num)
     e.preventDefault();
@@ -117,9 +117,8 @@ const Modal = () => {
                   setPhoneNumber(e.target.value);
                   setErrorMessage(""); // Clear error message on input change
                 }}
-                className={`border p-2 rounded w-full mb-4 ${
-                  errorMessage ? "border-red-500" : "border-gray-300"
-                }`}
+                className={`border p-2 rounded w-full mb-4 ${errorMessage ? "border-red-500" : "border-gray-300"
+                  }`}
                 required
               />
               {errorMessage && (
@@ -129,11 +128,11 @@ const Modal = () => {
                 type="submit" id="submit_form" disabled={loading}
                 className="bg-slate-500 text-white px-4 py-2 rounded-md hover:bg-slate-600 block mx-auto"
               >
-             {loading ? (
-                <div className="spinner-border animate-spin border-4 rounded-full border-t-transparent w-6 h-6"></div>
-              ) : (
-                'Submit'
-              )}
+                {loading ? (
+                  <div className="spinner-border animate-spin border-4 rounded-full border-t-transparent w-6 h-6"></div>
+                ) : (
+                  'Submit'
+                )}
               </button>
             </form>
             {successMessage && (
