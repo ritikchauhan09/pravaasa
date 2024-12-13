@@ -6,6 +6,7 @@ const Modal = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Check localStorage to see if the modal has been shown before
@@ -39,10 +40,14 @@ const Modal = () => {
 
     return "";
   };
+
   const api_url_add_num = process.env.NEXT_PUBLIC_WEBSITE_URL+"api/add-number";
-  console.log(api_url_add_num)
   const handleSubmit = async (e) => {
+    console.log(api_url_add_num)
     e.preventDefault();
+
+    setLoading(true);
+
     const validationError = validatePhoneNumber(phoneNumber);
 
     if (!validationError) {
@@ -68,6 +73,8 @@ const Modal = () => {
       } catch (error) {
         console.error("Error:", error);
         setErrorMessage("Failed to connect to the server.");
+      } finally {
+        setLoading(false);
       }
     } else {
       setErrorMessage(validationError);
@@ -119,10 +126,14 @@ const Modal = () => {
                 <p className="text-red-500 text-sm mb-4">{errorMessage}</p>
               )}
               <button
-                type="submit"
+                type="submit" id="submit_form" disabled={loading}
                 className="bg-slate-500 text-white px-4 py-2 rounded-md hover:bg-slate-600 block mx-auto"
               >
-                Submit
+             {loading ? (
+                <div className="spinner-border animate-spin border-4 rounded-full border-t-transparent w-6 h-6"></div>
+              ) : (
+                'Submit'
+              )}
               </button>
             </form>
             {successMessage && (
