@@ -1,6 +1,5 @@
 // pages/terms.js
 import Link from "next/link";
-
 import Head from "next/head";
 
 export default function Terms() {
@@ -14,15 +13,19 @@ export default function Terms() {
         />
       </Head>
       <header
-        className="bg-blue-200 text-white text-center py-24"
-        style={{ backgroundImage: 'url("/images/term-service.jpg")' }}
+        className="bg-blue-200 text-white text-center py-16 md:py-24"
+        style={{
+          backgroundImage: 'url("/images/term-service.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        <h1 className="text-4xl font-bold mb-6 text-center text-white">
+        <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white">
           Terms and Conditions
         </h1>
       </header>
-      <main className="bg-gray-100 min-h-screen py-8 px-4 md:px-8 ">
-        <div className="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <main className="bg-gray-100 min-h-screen py-6 px-4 sm:px-6 md:px-8">
+        <div className="max-w-4xl lg:max-w-6xl mx-auto bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg">
           <section className="mb-6">
             <p>
               Welcome to Pravaasa Bliss (“we,” “our,” “us”). By accessing and
@@ -32,8 +35,10 @@ export default function Terms() {
           </section>
           <hr className="my-5" />
           <section className="mb-6">
-            <h2 className="text-xl font-semibold mb-4">1. Use of Website</h2>
-            <ul className="list-disc list-inside">
+            <h2 className="text-lg md:text-xl font-semibold mb-4">
+              1. Use of Website
+            </h2>
+            <ul className="list-disc list-inside space-y-2">
               <li>
                 <strong>Eligibility:</strong> You must be at least 18 years old
                 to use our website. By using our site, you represent and warrant
@@ -53,8 +58,10 @@ export default function Terms() {
             </ul>
           </section>
           <section className="mb-6">
-            <h2 className="text-xl font-semibold mb-4">2. Travel Services</h2>
-            <ul className="list-disc list-inside">
+            <h2 className="text-lg md:text-xl font-semibold mb-4">
+              2. Travel Services
+            </h2>
+            <ul className="list-disc list-inside space-y-2">
               <li>
                 <strong>Booking:</strong> All travel bookings are subject to
                 availability and confirmation. We act as an intermediary between
@@ -68,9 +75,9 @@ export default function Terms() {
                 <strong>Cancellations and Refunds:</strong> Cancellation
                 policies vary by provider. Please review the specific terms
                 associated with your booking.
-                <div className="ml-5">
-                  <h2 className="font-bold">1. Cancellation Policy:</h2>
-                  <ul className="ml-3 list-disc list-inside">
+                <div className="ml-4 sm:ml-5">
+                  <h3 className="font-bold">1. Cancellation Policy:</h3>
+                  <ul className="list-disc list-inside ml-3 space-y-2">
                     <li>
                       <strong>Standard Cancellation:</strong> If you need to
                       cancel your booking, please do so at least 7 days before
@@ -78,18 +85,20 @@ export default function Terms() {
                     </li>
                     <li>
                       <strong>Cancellation Fees:</strong>
-                      <li className="ml-7">
-                        Cancellations made less than 7 days before departure
-                        will incur a 50% cancellation fee.
-                      </li>
-                      <li className="ml-7">
-                        No refunds will be provided for cancellations made on
-                        the day of departure or for no-shows.
-                      </li>
+                      <ul className="ml-5 space-y-2">
+                        <li>
+                          Cancellations made less than 7 days before departure
+                          will incur a 50% cancellation fee.
+                        </li>
+                        <li>
+                          No refunds will be provided for cancellations made on
+                          the day of departure or for no-shows.
+                        </li>
+                      </ul>
                     </li>
                   </ul>
-                  <h2 className="font-bold">2. Refund Policy:</h2>
-                  <ul className="ml-3 list-disc list-inside">
+                  <h3 className="font-bold">2. Refund Policy:</h3>
+                  <ul className="list-disc list-inside ml-3 space-y-2">
                     <li>
                       <strong>Eligibility for Refunds:</strong> Refund requests
                       will only be considered if the cancellation is made within
@@ -105,8 +114,8 @@ export default function Terms() {
                       the original payment method used during the booking.
                     </li>
                   </ul>
-                  <h2 className="font-bold">3. Exceptional Circumstances:</h2>
-                  <ul className="ml-3 list-disc list-inside">
+                  <h3 className="font-bold">3. Exceptional Circumstances:</h3>
+                  <ul className="list-disc list-inside ml-3 space-y-2">
                     <li>
                       In the event of unforeseen circumstances (e.g., natural
                       disasters, government restrictions), we may offer a full
@@ -125,8 +134,8 @@ export default function Terms() {
             </ul>
           </section>
           <section className="mb-6">
-            <h2 className="text-xl font-semibold mb-4">3. Content</h2>
-            <ul className="list-disc list-inside">
+            <h2 className="text-lg md:text-xl font-semibold mb-4">3. Content</h2>
+            <ul className="list-disc list-inside space-y-2">
               <li>
                 <strong>Intellectual Property:</strong> All content on our
                 website, including text, images, and logos, is owned by or
@@ -140,10 +149,10 @@ export default function Terms() {
             </ul>
           </section>
           <section className="mb-6">
-            <h2 className="text-xl font-semibold mb-4">
+            <h2 className="text-lg md:text-xl font-semibold mb-4">
               4. Limitation of Liability
             </h2>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside space-y-2">
               <li>
                 <strong>No Warranty:</strong> Our website and services are
                 provided “as is” without any warranties of any kind. We disclaim
@@ -157,7 +166,7 @@ export default function Terms() {
             </ul>
           </section>
           <section className="mb-6">
-            <h2 className="text-xl font-semibold mb-4">5. Privacy</h2>
+            <h2 className="text-lg md:text-xl font-semibold mb-4">5. Privacy</h2>
             <p>
               <strong>Data Collection:</strong> We collect personal information
               in accordance with our Privacy Policy. By using our website, you
@@ -165,7 +174,7 @@ export default function Terms() {
             </p>
           </section>
           <section className="mb-6">
-            <h2 className="text-xl font-semibold mb-4">6. Modifications</h2>
+            <h2 className="text-lg md:text-xl font-semibold mb-4">6. Modifications</h2>
             <p>
               <strong>Changes to Terms:</strong> We reserve the right to modify
               these Terms and Conditions at any time. Changes will be effective
@@ -173,7 +182,7 @@ export default function Terms() {
             </p>
           </section>
           <section className="mb-6">
-            <h2 className="text-xl font-semibold mb-4">7. Governing Law</h2>
+            <h2 className="text-lg md:text-xl font-semibold mb-4">7. Governing Law</h2>
             <p>
               <strong>Jurisdiction:</strong> These Terms and Conditions are
               governed by the laws of India. Any disputes will be resolved in
@@ -181,7 +190,7 @@ export default function Terms() {
             </p>
           </section>
           <section className="mb-6">
-            <h2 className="text-xl font-semibold mb-4">8. Contact Us</h2>
+            <h2 className="text-lg md:text-xl font-semibold mb-4">8. Contact Us</h2>
             <p>
               If you have any questions about these Terms and Conditions, please
               contact us at{" "}
