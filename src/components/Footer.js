@@ -4,7 +4,7 @@ import Newsletter from "./Newsletter";
 
 export default function Footer() {
   return (
-    <footer className="bg-black pt-20 text-white">
+    <footer className="bg-black pt-10 text-white">
       <div className="max-w-full container mx-auto px-6 md:px-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
           {/* Company Info */}
