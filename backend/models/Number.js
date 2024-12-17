@@ -8,4 +8,4 @@ import mongoose from 'mongoose';
     }
   });
 
-export default mongoose.models.User || mongoose.model('Mobile', userSchema);
+export default mongoose.models.User || mongoose.model('User', userSchema);
