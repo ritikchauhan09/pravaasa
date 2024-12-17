@@ -27,14 +27,17 @@ const Modal = () => {
     const phonePattern = /^[6-9]\d{9}$/;
 
     if (!onlyNumbersPattern.test(number)) {
+      setLoading(false);
       return "Phone number should contain only digits.";
     }
 
     if (number.length !== 10) {
+      setLoading(false);
       return "Phone number must be exactly 10 digits long.";
     }
 
     if (!phonePattern.test(number)) {
+      setLoading(false);
       return "Phone number must start with a digit between 6 and 9.";
     }
 
