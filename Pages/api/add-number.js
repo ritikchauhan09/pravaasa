@@ -6,14 +6,21 @@ const addNumberHandler = async (req, res) => {
   const website_url = process.env.NEXT_PUBLIC_WEBSITE_URL;
 
   try {
-    // Run the CORS middleware
+    
+    console.log('Running CORS middleware...');
     await runMiddleware(req, res, cors);
+    console.log('CORS middleware completed');
 
+    // Handle OPTIONS request
     if (req.method === 'OPTIONS') {
-      return res.status(200).end();
+      console.log('OPTIONS request received, sending 200 response...');
+      return res.status(200).end(); // Preflight response
     }
 
-    await connectToDatabase(); // Ensure the database is connected
+    // Connect to the database
+    console.log('Connecting to database...');
+    await connectToDatabase();
+    console.log('Database connected');
 
     if (req.method === 'POST') {
       const { number } = req.body;

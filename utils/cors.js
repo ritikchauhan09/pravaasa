@@ -2,7 +2,7 @@ import Cors from 'cors';
 
 const cors = Cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Include OPTIONS
-  origin: process.env.NEXT_PUBLIC_WEBSITE_URL || '*',   // Dynamic origin
+  origin: '*',   // Dynamic origin
   allowedHeaders: ['Content-Type', 'Authorization'],
 });
 
