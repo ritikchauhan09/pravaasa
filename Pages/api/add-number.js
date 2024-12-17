@@ -1,30 +1,19 @@
 import connectToDatabase from '../../utils/database';
 import User from '../../backend/models/Number';
+import cors, { runMiddleware } from '../../utils/cors';
 
 const addNumberHandler = async (req, res) => {
   const website_url = process.env.NEXT_PUBLIC_WEBSITE_URL;
 
-  res.setHeader('Access-Control-Allow-Origin', website_url);
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end();
-  }
-
   try {
-    await connectToDatabase(); // Ensure the database is connected
+    // Run the CORS middleware
+    await runMiddleware(req, res, cors);
 
-    if (req.method === 'GET') {//testing
-      try {
-        // Example of saving a number in the GET request for testing
-        const result = await User.create({ number: '8219185855' });
-        return res.status(201).json({ message: 'Number saved successfully' });
-      } catch (error) {
-        console.error('Error saving number:', error);
-        return res.status(500).json({ message: 'Internal server error', error: error.message });
-      }
+    if (req.method === 'OPTIONS') {
+      return res.status(200).end();
     }
+
+    await connectToDatabase(); // Ensure the database is connected
 
     if (req.method === 'POST') {
       const { number } = req.body;
