@@ -1,27 +1,43 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-let isConnected;
+//const MONGO_DB_URI = process.env.MONGODB_URI;
+const MONGO_DB_URI = 'mongodb+srv://chauhanritik487:N58KbAmMq3F9oxBX@cluster0.h7cjm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+
+let cached = global._mongo;  
+
+if (!cached) {
+  cached = global._mongo = { conn: null, promise: null };
+}
 
 const connectToDatabase = async () => {
-  if (isConnected) {
-    console.log("Using existing MongoDB connection");
-    return;
+  if (cached.conn) {
+    // Reuse cached connection
+    return cached.conn;
   }
 
-  try {
-    const db = await mongoose.connect('mongodb+srv://chauhanritik487:N58KbAmMq3F9oxBX@cluster0.h7cjm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        serverSelectionTimeoutMS: 5000, // Timeout after 5 seconds if connection fails
-        socketTimeoutMS: 45000,
-        bufferCommands: false,  // Timeout for operations (e.g., insert) after 45 seconds
+  if (!cached.promise) {
+    const options = {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 5000,
+      socketTimeoutMS: 45000,
+      bufferCommands: false,
+    };
+
+    cached.promise = mongoose
+      .connect(MONGO_DB_URI, options)
+      .then((mongooseInstance) => {
+        console.log('Connected to MongoDB');
+        return mongooseInstance;
       })
-    isConnected = db.connections[0].readyState;
-    console.log("Connected to MongoDB");
-  } catch (error) {
-    console.error("MongoDB connection error:", error);
-    throw error;
+      .catch((err) => {
+        console.error('Error connecting to MongoDB:', err);
+        throw new Error('MongoDB connection failed');
+      });
   }
+
+  cached.conn = await cached.promise;
+  return cached.conn;
 };
 
-module.exports = connectToDatabase;
+export default connectToDatabase;
