@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
 
-const MONGO_DB_URI = process.env.MONGODB_URI;
+//const MONGO_DB_URI = process.env.MONGODB_URI;
+const MONGO_DB_URI = 'mongodb+srv://chauhanritik487:N58KbAmMq3F9oxBX@cluster0.h7cjm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
-let cached = global._mongo;  // Global variable to cache database connection in Vercel serverless environment
+let cached = global._mongo;  
 
 if (!cached) {
   cached = global._mongo = { conn: null, promise: null };
