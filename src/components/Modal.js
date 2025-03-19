@@ -44,7 +44,8 @@ const Modal = () => {
     return "";
   };
 
-  const api_url_add_num = process.env.NEXT_PUBLIC_WEBSITE_URL + "api/add-number";
+  // const api_url_add_num = process.env.NEXT_PUBLIC_WEBSITE_URL + "api/add-number";
+  const api_url_add_num = process.env.NEXT_PUBLIC_WEBSITE_URL + "api/save";
   const handleSubmit = async (e) => {
     console.log(api_url_add_num)
     e.preventDefault();
