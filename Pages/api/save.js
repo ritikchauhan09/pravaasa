@@ -37,7 +37,7 @@ export default async function handler(req, res) {
 
     const rows = response.data.values || [];
     const lastSerialNumber = rows.length + 1; // Auto-increment Serial No.
-    console.log(rows)
+
 
     // Step 2: Append the new Serial Number & Mobile Number
     await sheets.spreadsheets.values.append({
