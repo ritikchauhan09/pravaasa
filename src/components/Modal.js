@@ -76,7 +76,7 @@ const Modal = () => {
         }
       } catch (error) {
         console.error("Error:", error);
-        setErrorMessage("Failed to connect to the server.");
+        setErrorMessage("Something Went Wrong, Please Try again!");
       } finally {
         setLoading(false);
       }
