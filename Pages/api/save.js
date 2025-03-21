@@ -16,8 +16,8 @@ export default async function handler(req, res) {
 
   try {
     // Load credentials
-    const credentialsPath = path.join(process.cwd(), "credentials.json");
-    const credentials = JSON.parse(fs.readFileSync(credentialsPath, "utf8"));
+    
+    const credentials = JSON.parse(process.env.GOOGLE_CRED);
 
     // Authenticate with Google Sheets API
     const auth = new google.auth.GoogleAuth({
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
 
     const rows = response.data.values || [];
     const lastSerialNumber = rows.length + 1; // Auto-increment Serial No.
-    console.log(lastSerialNumber,number)
+    console.log(rows)
 
     // Step 2: Append the new Serial Number & Mobile Number
     await sheets.spreadsheets.values.append({
