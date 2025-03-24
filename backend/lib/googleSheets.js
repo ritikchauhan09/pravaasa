@@ -32,7 +32,7 @@ export async function saveMobileNumber(number) {
       valueInputOption: "RAW",
       insertDataOption: "INSERT_ROWS",
       requestBody: {
-        values: [[lastSerialNumber, number, FALSE]],
+        values: [[lastSerialNumber, number, false]],
       },
     });
 

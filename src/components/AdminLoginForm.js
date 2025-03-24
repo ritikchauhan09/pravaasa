@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+
 export default function AdminLoginForm({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -14,10 +15,12 @@ export default function AdminLoginForm({ onLogin }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
     });
-
     if (res.ok) {
+      console.log("✅ Login API Success. Saving session...");
+      localStorage.setItem("isAdminLoggedIn", "true"); // Store login status
       onLogin();
     } else {
+      console.log("❌ Login Failed");
       setError("Invalid credentials!");
     }
   };

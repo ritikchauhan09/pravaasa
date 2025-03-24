@@ -1,14 +1,30 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import AdminLoginForm from "../../components/AdminLoginForm";
+import AdminNavbar from "../../components/AdminNavbar";
 
-export default function AdminLoginPage() {
+export default function AdminDashboard() {
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(true);
 
-  const handleLoginSuccess = () => {
-    router.push("/admin"); // Redirect to admin dashboard after login
-  };
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isAdminLoggedIn");
 
-  return <AdminLoginForm onLogin={handleLoginSuccess} />;
+    if (!isLoggedIn) {
+      router.push("/admin/login"); // Redirect if not logged in
+    } else {
+      setIsLoading(false);
+    }
+  }, [router]);
+
+  if (isLoading) return <p>Loading...</p>;
+
+  return (
+    <div>
+      <div className="flex flex-col items-center justify-center h-screen">
+        <h1 className="text-3xl font-bold">Welcome to Admin Dashboard</h1>
+      </div>
+    </div>
+  );
 }
