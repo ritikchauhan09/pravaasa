@@ -28,11 +28,11 @@ export async function saveMobileNumber(number) {
     // Append new data
     await sheets.spreadsheets.values.append({
       spreadsheetId: SPREADSHEET_ID,
-      range: `${SHEET_NAME}!A:B`,
+      range: `${SHEET_NAME}!A:C`,
       valueInputOption: "RAW",
       insertDataOption: "INSERT_ROWS",
       requestBody: {
-        values: [[lastSerialNumber, number]],
+        values: [[lastSerialNumber, number, FALSE]],
       },
     });
 
@@ -40,5 +40,21 @@ export async function saveMobileNumber(number) {
   } catch (error) {
     console.error("Google Sheets Error:", error);
     throw new Error("Failed to save data. Please try again.");
+  }
+}
+
+// Fetch Google Sheets Data Function
+export async function getSheetData() {
+  try {
+    const sheets = google.sheets({ version: "v4", auth });
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: SPREADSHEET_ID,
+      range: `${SHEET_NAME}!A:D`, // Adjust range as needed
+    });
+
+    return response.data.values;
+  } catch (error) {
+    console.error("Error fetching Google Sheets data:", error);
+    throw new Error("Failed to retrieve data.");
   }
 }

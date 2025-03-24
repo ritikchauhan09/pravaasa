@@ -1,4 +1,4 @@
-import { getSheetData } from "@/backend/lib/googleSheets";
+import { getSheetData } from "../../backend/lib/googleSheets";
 
 export default async function handler(req, res) {
   try {
