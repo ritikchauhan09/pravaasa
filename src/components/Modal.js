@@ -44,19 +44,20 @@ const Modal = () => {
     return "";
   };
 
-  // const api_url_add_num = process.env.NEXT_PUBLIC_WEBSITE_URL + "api/add-number";
-  const api_url_add_num = process.env.NEXT_PUBLIC_WEBSITE_URL + "api/save";
+  const api_url_add_num = new URL("/api/save", process.env.NEXT_PUBLIC_WEBSITE_URL).toString();
+
   const handleSubmit = async (e) => {
-    console.log(api_url_add_num)
     e.preventDefault();
-
+    console.log("API URL:", api_url_add_num);
+  
     setLoading(true);
-
+    setErrorMessage("");
+    setSuccessMessage("");
+  
     const validationError = validatePhoneNumber(phoneNumber);
-
+  
     if (!validationError) {
       try {
-        // Send the phone number to the backend
         const response = await fetch(api_url_add_num, {
           method: "POST",
           headers: {
@@ -64,26 +65,27 @@ const Modal = () => {
           },
           body: JSON.stringify({ number: phoneNumber }),
         });
-
-        const result = await response.json();
-        if (response.ok) {
-          // Store the phone number in localStorage if valid
-          localStorage.setItem("phoneNumber", phoneNumber);
-          setSuccessMessage("Phone number saved successfully!");
-          closeModal();
-        } else {
-          setErrorMessage(result.message || "Failed to save phone number.");
+  
+        if (!response.ok) {
+          throw new Error(`Failed to save: ${response.statusText}`);
         }
+  
+        const result = await response.json();
+        localStorage.setItem("phoneNumber", phoneNumber);
+        setSuccessMessage("✅ Phone number saved successfully!");
+        closeModal();
       } catch (error) {
         console.error("Error:", error);
-        setErrorMessage("Something Went Wrong, Please Try again!");
+        setErrorMessage(error.message || "Something went wrong, please try again!");
       } finally {
         setLoading(false);
       }
     } else {
       setErrorMessage(validationError);
+      setLoading(false);
     }
   };
+
 
   return (
     <>
