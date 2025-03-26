@@ -44,7 +44,8 @@ const Modal = () => {
     return "";
   };
 
-  const api_url_add_num = process.env.NEXT_PUBLIC_WEBSITE_URL + "api/add-number";
+  // const api_url_add_num = process.env.NEXT_PUBLIC_WEBSITE_URL + "api/add-number";
+  const api_url_add_num = process.env.NEXT_PUBLIC_WEBSITE_URL + "api/save";
   const handleSubmit = async (e) => {
     console.log(api_url_add_num)
     e.preventDefault();
@@ -75,7 +76,7 @@ const Modal = () => {
         }
       } catch (error) {
         console.error("Error:", error);
-        setErrorMessage("Failed to connect to the server.");
+        setErrorMessage("Something Went Wrong, Please Try again!");
       } finally {
         setLoading(false);
       }
