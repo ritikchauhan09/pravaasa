@@ -46,7 +46,7 @@ export default async function handler(req, res) {
       valueInputOption: "RAW",
       insertDataOption: "INSERT_ROWS",
       requestBody: {
-        values: [[lastSerialNumber, number]], // Auto-increment Serial No.
+        values: [[lastSerialNumber, number, false, process.env.ENVIRONMENT]], // Auto-increment Serial No.
       },
     });
 
