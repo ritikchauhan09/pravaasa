@@ -1,7 +1,16 @@
 export async function POST(req) {
   try {
     const { username, password } = await req.json();
-console.log(username, password,env.ADMIN_USER,env.ADMIN_PASS)
+
+       // ✅ Debugging Logs
+       console.log("Received:", username, password);
+   
+       // ✅ Check if environment variables exist
+       if (!process.env.ADMIN_USER || !process.env.ADMIN_PASS) {
+         throw new Error("Admin credentials not set in environment variables");
+       }
+       console.log("ENV:", process.env.ADMIN_USER, process.env.ADMIN_PASS);
+       
     if (username === process.env.ADMIN_USER && password === process.env.ADMIN_PASS) {
       return Response.json({ success: true }, { status: 200 });
     } else {
