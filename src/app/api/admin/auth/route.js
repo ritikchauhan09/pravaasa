@@ -1,7 +1,7 @@
 export async function POST(req) {
   try {
     const { username, password } = await req.json();
-
+console.log(username, password,env.ADMIN_USER,env.ADMIN_PASS)
     if (username === process.env.ADMIN_USER && password === process.env.ADMIN_PASS) {
       return Response.json({ success: true }, { status: 200 });
     } else {
