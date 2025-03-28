@@ -1,28 +1,34 @@
-import { saveMobileNumber }  from "../backend/lib/googleSheets";
 import { withCors } from "../backend/utils/cors"; // Import CORS middleware
-
-// import { saveMobileNumber } from "@/backend/lib/googleSheets"; 
-// import { withCors } from "@/backend/utils/cors"; // ✅ Correct Import
 
 async function postHandler(req) {
   try {
-    const { number } = await req.json();
-    if (!number) {
-      return Response.json({ error: "Mobile number is required" }, { status: 400 });
+    // ✅ Use dynamic import inside the function
+    const { saveMobileNumber } = await import("../backend/lib/googleSheets");
+
+    if (!saveMobileNumber) {
+      throw new Error("Import failed");
     }
 
-    const result = await saveMobileNumber(number);
-    return Response.json(result, { status: 200 });
+    const body = await req.json().catch(() => null);
+
+    if (!body || !body.number) {
+      return new Response(JSON.stringify({ error: "Mobile number is required" }), { status: 400 });
+    }
+
+    const result = await saveMobileNumber(body.number);
+    
+    return new Response(JSON.stringify(result), { status: 200 });
   } catch (error) {
     console.error("API Error:", error);
-    return Response.json({ error: error.message }, { status: 500 });
+    return new Response(JSON.stringify({ error: error.message || "Failed to process request" }), { status: 500 });
   }
 }
 
 async function getHandler() {
-  return Response.json({ error: "Method Not Allowed" }, { status: 405 });
+  return new Response(JSON.stringify({ error: "Method Not Allowed" }), { status: 405 });
 }
 
 // ✅ Wrap handlers with CORS
 export const POST = withCors(postHandler);
 export const GET = withCors(getHandler);
+
