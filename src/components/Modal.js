@@ -44,7 +44,7 @@ const Modal = () => {
     return "";
   };
 
-  const api_url_add_num = new URL("/api/save", process.env.NEXT_PUBLIC_WEBSITE_URL).toString();
+  const api_url_add_num = new URL("/api/Save", process.env.NEXT_PUBLIC_WEBSITE_URL).toString();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
