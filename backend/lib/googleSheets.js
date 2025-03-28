@@ -52,9 +52,14 @@ export async function getSheetData() {
       range: `${SHEET_NAME}!A:D`, // Adjust range as needed
     });
 
-    return response.data.values;
+    if (!response.data.values || response.data.values.length === 0) {
+      console.warn("Google Sheets returned empty data.");
+      return { error: "No data available" }; // Ensure response is always valid JSON
+    }
+
+    return { success: true, data: response.data.values };
   } catch (error) {
     console.error("Error fetching Google Sheets data:", error);
-    throw new Error("Failed to retrieve data.");
+    return { error: "Failed to retrieve data." }; // Ensure a valid JSON response
   }
 }
