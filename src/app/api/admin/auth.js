@@ -11,3 +11,6 @@ export default function handler(req, res) {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 }
+
+// // Wrap the handler with CORS middleware
+// export default allowCors(handler);

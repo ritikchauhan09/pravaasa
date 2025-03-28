@@ -1,5 +1,5 @@
-import { saveMobileNumber }  from "../../backend/lib/googleSheets";
-import allowCors from "../../backend/utils/cors"; // Import CORS middleware
+import { saveMobileNumber }  from "../../../backend/lib/googleSheets";
+import allowCors from "../../../backend/utils/cors"; // Import CORS middleware
 
 async function handler(req, res) {
   if (req.method !== "POST") {
