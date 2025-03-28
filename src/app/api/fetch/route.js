@@ -3,9 +3,24 @@ import { getSheetData } from "../../../../backend/lib/googleSheets";
 export async function GET() {
   try {
     const data = await getSheetData();
-    return Response.json(data, { status: 200 });
+    if (!data) {
+      return new Response(JSON.stringify({ error: "No data found" }), {
+        status: 404,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    return new Response(JSON.stringify(data), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
-    return Response.json({ error: error.message }, { status: 500 });
+    console.error("API Fetch Error:", error);
+
+    return new Response(JSON.stringify({ error: "Internal Server Error" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }
 
