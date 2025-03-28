@@ -1,5 +1,5 @@
-import { saveMobileNumber }  from "../../../../backend/lib/googleSheets";
-import { withCors } from "../../../../backend/utils/cors"; // Import CORS middleware
+import { saveMobileNumber }  from "../backend/lib/googleSheets";
+import { withCors } from "../backend/utils/cors"; // Import CORS middleware
 
 // import { saveMobileNumber } from "@/backend/lib/googleSheets"; 
 // import { withCors } from "@/backend/utils/cors"; // ✅ Correct Import

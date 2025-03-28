@@ -1,4 +1,4 @@
-// import { getSheetData } from "../../../../backend/lib/googleSheets";
+import { getSheetData } from "../backend/lib/googleSheets";
 
 // export async function GET() {
 //   try {
