@@ -4,10 +4,7 @@ export async function GET() {
   try {
     const data = await getSheetData();
     if (!data) {
-      return new Response(JSON.stringify({ error: "No data found" }), {
-        status: 404,
-        headers: { "Content-Type": "application/json" },
-      });
+      throw new Error("No data retrieved from Google Sheets");
     }
 
     return new Response(JSON.stringify(data), {
@@ -15,9 +12,8 @@ export async function GET() {
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("API Fetch Error:", error);
-
-    return new Response(JSON.stringify({ error: "Internal Server Error" }), {
+    console.error("API Error:", error);
+    return new Response(JSON.stringify({ error: error.message || "Failed to fetch data" }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
     });
