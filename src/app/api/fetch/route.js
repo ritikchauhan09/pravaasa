@@ -1,10 +1,14 @@
-import { getSheetData } from "../../backend/lib/googleSheets";
+import { getSheetData } from "../../../../backend/lib/googleSheets";
 
-export default async function handler(req, res) {
+export async function GET() {
   try {
     const data = await getSheetData();
-    return res.status(200).json(data);
+    return Response.json(data, { status: 200 });
   } catch (error) {
-    return res.status(500).json({ error: error.message });
+    return Response.json({ error: error.message }, { status: 500 });
   }
+}
+
+export async function POST() {
+  return Response.json({ error: "Method Not Allowed" }, { status: 405 });
 }

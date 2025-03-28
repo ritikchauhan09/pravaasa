@@ -1,24 +1,40 @@
 import { saveMobileNumber }  from "../../../../backend/lib/googleSheets";
-import allowCors from "../../../../backend/utils/cors"; // Import CORS middleware
+import { withCors } from "../../../../backend/utils/cors"; // Import CORS middleware
 
-async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method Not Allowed" });
-  }
+// import { saveMobileNumber } from "@/backend/lib/googleSheets"; 
+// import { withCors } from "@/backend/utils/cors"; // ✅ Correct Import
 
+async function postHandler(req) {
   try {
-    const { number } = req.body;
+    const { number } = await req.json();
     if (!number) {
-      return res.status(400).json({ error: "Mobile number is required" });
+      return new Response(JSON.stringify({ error: "Mobile number is required" }), {
+        status: 400,
+        headers: { "Content-Type": "application/json" },
+      });
     }
 
     const result = await saveMobileNumber(number);
-    return res.status(200).json(result);
+    return new Response(JSON.stringify(result), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
     console.error("API Error:", error);
-    return res.status(500).json({ error: error.message });
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }
 
-// // Wrap the handler with CORS middleware
-export default allowCors(handler);
+async function getHandler() {
+  return new Response(JSON.stringify({ error: "Method Not Allowed" }), {
+    status: 405,
+    headers: { "Content-Type": "application/json" },
+  });
+}
+
+// ✅ Wrap handlers with CORS
+export const POST = withCors(postHandler);
+export const GET = withCors(getHandler);
