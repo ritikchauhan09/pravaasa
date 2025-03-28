@@ -4,7 +4,7 @@ export async function POST(req) {
 
        // ✅ Debugging Logs
        console.log("Received:", username, password);
-   
+       console.log("ENV:", process.env.ADMIN_USER, process.env.ADMIN_PASS);
        // ✅ Check if environment variables exist
        if (!process.env.ADMIN_USER || !process.env.ADMIN_PASS) {
          throw new Error("Admin credentials not set in environment variables");
@@ -22,5 +22,6 @@ export async function POST(req) {
 }
 
 export async function GET() {
+  console.log("ENV:", process.env);
   return Response.json({ error: "Method Not Allowed" }, { status: 405 });
 }
