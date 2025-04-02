@@ -6,18 +6,18 @@ export async function GET() {
     if (!getSheetData) {
       throw new Error("Import failed");
     }
-
-    console.log("Debug: Importing getSheetData...");
-    console.log("getSheetData:", getSheetData);
-    
+   
     // ✅ Fetch data correctly
     const data = await getSheetData(); // You forgot to call the function
     
     if (!data) {
       throw new Error("No data retrieved from Google Sheets");
     }
+    console.log(data);
+    const filteredData = data.filter((row) => row[3] === process.env.ENVIRONMENT); // Column D is index 3 (0-based index)
+    console.log(filteredData);
 
-    return new Response(JSON.stringify(data), {
+    return new Response(JSON.stringify(filteredData), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });
