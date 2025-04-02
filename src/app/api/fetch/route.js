@@ -15,8 +15,8 @@ export async function GET() {
     if (!data || !Array.isArray(data.data)) {
       console.error("Error: data.data is not an array. Received:", typeof data, data);
     } else {
-      const filteredData = data.data.filter((row) => row[3] === process.env.ENVIRONMENT);
-      console.log("Filtered Data:", filteredData);
+      const filteredData = [data.data[0], ...data.data.filter((row) => row[3] === process.env.ENVIRONMENT)];
+      // const filteredData = data.data.filter((row) => row[3] === process.env.ENVIRONMENT);
       return new Response(JSON.stringify(filteredData), {
         status: 200,
         headers: { "Content-Type": "application/json" },
