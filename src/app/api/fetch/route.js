@@ -6,21 +6,22 @@ export async function GET() {
     if (!getSheetData) {
       throw new Error("Import failed");
     }
-
-    console.log("Debug: Importing getSheetData...");
-    console.log("getSheetData:", getSheetData);
-    
+   
     // ✅ Fetch data correctly
     const data = await getSheetData(); // You forgot to call the function
     
-    if (!data) {
-      throw new Error("No data retrieved from Google Sheets");
+    console.log("Fetched data:", data);
+    
+    if (!data || !Array.isArray(data.data)) {
+      console.error("Error: data.data is not an array. Received:", typeof data, data);
+    } else {
+      const filteredData = [data.data[0], ...data.data.filter((row) => row[3] === process.env.ENVIRONMENT)];
+      // const filteredData = data.data.filter((row) => row[3] === process.env.ENVIRONMENT);
+      return new Response(JSON.stringify(filteredData), {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      });
     }
-
-    return new Response(JSON.stringify(data), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
   } catch (error) {
     console.error("API Error:", error);
     return new Response(
